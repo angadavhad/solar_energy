@@ -1,0 +1,109 @@
+/* COMMON */
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+h1,h2,h3{
+  color:#0b2c4d;
+}
+
+/* HERO */
+.services-hero{
+  background:#f8fdfc;
+  text-align:center;
+  padding:80px 20px;
+}
+
+.services-hero h1{
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+.services-hero p{
+  font-size:18px;
+  color:#555;
+}
+
+/* SERVICES CARDS */
+.services-list .container{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.service-card{
+  background:#fff;
+  padding:35px 30px;
+  border-radius:8px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.08);
+  text-align:center;
+}
+
+.service-card h3{
+  font-size:22px;
+  margin-bottom:15px;
+}
+
+.service-card p{
+  font-size:15px;
+  color:#555;
+  margin-bottom:25px;
+}
+
+/* WHY CHOOSE */
+.services-why{
+  background:#f9fafb;
+}
+
+.services-why h2{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.services-why ul{
+  max-width:700px;
+  margin:auto;
+  list-style:none;
+  padding:0;
+}
+
+.services-why li{
+  padding:10px 0;
+  font-size:16px;
+}
+
+/* CTA */
+.services-cta{
+  background:linear-gradient(260deg,#3df2f2,#a8fa2d);
+  text-align:center;
+  color:#0b2c4d;
+}
+
+.services-cta h2{
+  font-size:32px;
+  margin-bottom:25px;
+}
+
+/* BUTTON */
+.btn-primary{
+  display:inline-block;
+  padding:14px 36px;
+  background:#fff;
+  color:#0b2c4d;
+  font-weight:700;
+  border-radius:4px;
+  text-decoration:none;
+}
+
+.btn-primary.big{
+  padding:18px 52px;
+}
+
+/* RESPONSIVE */
+@media(max-width:991px){
+  .services-list .container{
+    grid-template-columns:1fr;
+  }
+}

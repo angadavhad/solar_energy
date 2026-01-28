@@ -48,22 +48,23 @@
   position:relative;
   padding:6px 0;
 }
-
 /* Underline hover / active */
 .ms-menu a::after{
   content:"";
   position:absolute;
   left:0;
   bottom:-8px;
-  width:0;
+  width:0;                  /* ⬅️ default: underline OFF */
   height:3px;
-  background:linear-gradient(260deg,#3df2f2,#a8fa2d);
+  background:linear-gradient(20deg,#baf1f1,#4d24aa);      /* white underline (black हवा असेल तर #000) */
   transition:.3s;
 }
+
 .ms-menu a:hover::after,
 .ms-menu a.active::after{
-  width:100%;
+  width:100%;               /* ⬅️ ONLY hover / active */
 }
+
 
 /* Dropdown */
 .ms-dropdown{
@@ -104,7 +105,7 @@
 /* CTA BUTTON */
 .ms-btn{
   padding:18px 52px;                 /* ⬅️ BIG */
-  background:linear-gradient(200deg,#86d6d6,#d9e664);
+  background:linear-gradient(200deg,#86d6d6,#adb65b);
   color:#0b2c4d !important;
 
   font-size:19px;
