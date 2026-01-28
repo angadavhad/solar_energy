@@ -50,4 +50,10 @@ public function solar_street_light(){
 	$this->load->view("user/solar_street_light");
 	$this->load->view("user/footer");
 }
+
+public function blogs(){
+	$this->load->view('user/navbar');
+	$this->load->view('user/blogs');
+	$this->load->view('user/footer');
+}
 }
