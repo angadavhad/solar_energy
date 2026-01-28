@@ -1,0 +1,98 @@
+.blog-item {
+	border-bottom: 1px solid #eee;
+}
+
+.blog-title {
+	font-size: 1.6rem;
+	font-weight: 700;
+	margin-bottom: 12px;
+	line-height: 1.3;
+    color: #000 ;
+}
+
+.blog-desc {
+	color: #555;
+	line-height: 1.6;
+	margin-bottom: 18px;
+	max-width: 90%;
+}
+
+.blog_img {
+	border-radius: 14px;
+	box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+	transition: transform 0.4s ease;
+}
+
+.blog_img:hover {
+	transform: scale(1.03);
+}
+
+.read_more_btn {
+	color: #111;
+	display: inline-block;
+	position: relative;
+	border-radius: 25px;
+	background: #ffffff;
+	padding: 10px 22px;
+	font-weight: 600;
+	text-decoration: none;
+	overflow: hidden;
+	z-index: 0;
+	transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Gradient border */
+.read_more_btn::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	padding: 2px;
+	border-radius: inherit;
+	background: linear-gradient(260deg, #3df2f2, #a8fa2d);
+	-webkit-mask:
+		linear-gradient(#fff 0 0) content-box,
+		linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+	z-index: -1;
+}
+
+/* Shine layer */
+.read_more_btn::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -140%;
+	width: 55%;
+	height: 100%;
+	background: linear-gradient(
+		120deg,
+		transparent,
+		rgba(255, 255, 255, 0.7),
+		transparent
+	);
+	transform: skewX(-20deg);
+	pointer-events: none;
+}
+
+/* Hover state */
+.read_more_btn:hover {
+	background: linear-gradient(260deg, #3df2f2, #a8fa2d);
+	box-shadow: 0 8px 24px rgba(61, 242, 242, 0.35);
+	color: #000;
+}
+
+/* Shine animation */
+.read_more_btn:hover::after {
+	animation: shine 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes shine {
+	from {
+		left: -140%;
+	}
+	to {
+		left: 140%;
+	}
+}
+
