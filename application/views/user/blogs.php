@@ -1,3 +1,21 @@
+<section class="about-hero">
+    <div class="slides">
+        <div class="slide active" style="background-image:url('<?= base_url('assets/image/about_bg1.jpg'); ?>')"></div>
+        <div class="slide" style="background-image:url('<?= base_url('assets/image/about_bg2.jpg'); ?>')"></div>
+        <div class="slide" style="background-image:url('<?= base_url('assets/image/about_bg3.jpg'); ?>')"></div>
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+        <h1>About Us</h1>
+    </div>
+
+    <div class="triangle-curve"></div>
+
+</section>
+
+
 <section class="container-fluid py-5">
     <div class="row px-lg-5 px-3 align-items-center blog-item">
 
@@ -12,7 +30,7 @@
             <p class="blog-desc">
                 Rayzon solar firmly and proudly believes in ‘success is brighter when it lights up an entire industry—not just an individual’.
             </p>
-            <a href="#" class="read_more_btn mt-2">Read More</a>
+            <a href="<?= base_url('user/blogs_details/1') ?>" class="read_more_btn mt-2">Read More</a>
         </div>
 
     </div>
@@ -31,7 +49,7 @@
             <p class="blog-desc">
                 Rayzon solar firmly and proudly believes in ‘success is brighter when it lights up an entire industry—not just an individual’.
             </p>
-            <a href="#" class="read_more_btn mt-2">Read More</a>
+            <a href="<?= base_url('user/blogs_details/1') ?>" class="read_more_btn mt-2">Read More</a>
         </div>
 
     </div>

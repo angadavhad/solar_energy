@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="<?= base_url('assets/css/solar_water_pump.css') ?>">
 <link rel="stylesheet" href="<?= base_url('assets/css/industrial.css') ?>">
 <link rel="stylesheet" href="<?= base_url('assets/css/blogs.css') ?>">
+<link rel="stylesheet" href="<?= base_url('assets/css/blogs_details.css') ?>">
 
   <script src="<?php echo base_url('assets/js/about.js'); ?>" defer></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">

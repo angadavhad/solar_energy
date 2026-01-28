@@ -111,7 +111,12 @@ public function quote(){
     $this->load->view("user/footer");
 }
 
+public function blogs_details($id){
+    // $data['blog']=$this->My_model->get_blog_details($id);
+    $this->load->view("user/navbar");
+    $this->load->view("user/blogs_details",$id);
+    $this->load->view("user/footer");
 
 }
 
-
+}
