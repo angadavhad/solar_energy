@@ -16,10 +16,10 @@ h1,h2{
   padding:130px 20px;
 
   background:
-    linear-gradient(
-      rgba(210,225,245,0.55),
-      rgba(185,210,240,0.55)
-    ),
+     linear-gradient(
+    rgba(212, 201, 97, 0.30),
+    rgba(233, 230, 51, 0.30)
+  ),
     url("../image/commercial.jpg") center/cover no-repeat;
 }
 

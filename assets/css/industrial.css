@@ -19,9 +19,9 @@ h1,h2{
   text-align:center;
 
   background:
-    linear-gradient(
-      rgba(133, 129, 129, 0.55),
-      rgba(133, 128, 128, 0.45)
+     linear-gradient(
+      rgba(212, 201, 97, 0.89),
+      rgba(233, 230, 51, 0.938)
     ),
     url("../image/industrial.jpg") center/cover no-repeat;
 }
