@@ -1,69 +1,57 @@
 /* ===============================
-   CONTACT HERO – SCOPED CSS
+   CONTACT HERO (SAME AS ABOUT)
    =============================== */
 
 .contact-hero {
     position: relative;
     width: 100%;
-    height: 380px;
+    height: 380px;   /* height control */
     overflow: hidden;
     background: #fff;
 }
 
-/* slides */
-.contact-hero .slides {
-    position: absolute;
-    inset: 0;
-    height: calc(100% - 70px);
-    z-index: 0;
-}
-
-.contact-hero .slide {
+/* background image */
+.contact-bg {
     position: absolute;
     inset: 0;
     background-size: cover;
     background-position: center;
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out;
+    z-index: 0;
 }
 
-.contact-hero .slide.active {
-    opacity: 1;
-}
-
-/* overlay */
-.contact-hero .overlay {
+/* yellow overlay */
+.contact-overlay {
     position: absolute;
     inset: 0;
-    height: calc(100% - 70px);
-    background: rgba(240,190,40,0.85);
+    background: rgba(240, 190, 40, 0.85);
     z-index: 1;
 }
 
 /* center text */
-.contact-hero .hero-content {
+.contact-hero-content {
     position: relative;
     z-index: 2;
-    height: calc(100% - 70px);
+    height: calc(100% - 80px);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
-.contact-hero .hero-content h1 {
-    color: #fff;
+.contact-hero-content h1 {
+    color: #ffffff;
     font-size: 48px;
+    font-weight: 600;
     margin: 0;
 }
 
-/* curve */
-.contact-hero .curve {
+/* bottom curve */
+.contact-curve {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 70px;
+    height: 80px;
     z-index: 3;
     pointer-events: none;
 }
@@ -74,18 +62,12 @@
         height: 260px;
     }
 
-    .contact-hero .hero-content h1 {
+    .contact-hero-content h1 {
         font-size: 30px;
     }
 
-    .contact-hero .slides,
-    .contact-hero .overlay,
-    .contact-hero .hero-content {
-        height: calc(100% - 50px);
-    }
-
-    .contact-hero .curve {
-        height: 50px;
+    .contact-curve {
+        height: 55px;
     }
 }
 

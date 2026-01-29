@@ -1,30 +1,27 @@
-<!-- ================= CONTACT HERO ================= -->
 <section class="contact-hero">
 
-    <!-- Background Images -->
-    <div class="slides">
-        <div class="slide active"
-             style="background-image:url('<?= base_url('assets/image/blog1.jpg') ?>')"></div>
-
-        <div class="slide"
-             style="background-image:url('<?= base_url('assets/image/blog2.jpg') ?>')"></div>
+    <!-- Background Image -->
+    <div class="contact-bg"
+         style="background-image:url('<?= base_url('assets/image/blog1.jpg') ?>')">
     </div>
 
     <!-- Yellow Overlay -->
-    <div class="overlay"></div>
+    <div class="contact-overlay"></div>
 
     <!-- Center Text -->
-    <div class="hero-content">
-        <h1>Contact</h1>
+    <div class="contact-hero-content">
+        <h1>Contact Us</h1>
     </div>
 
-    <!-- Bottom Curve (MAHA SOLAR STYLE) -->
-    <svg class="curve" viewBox="0 0 1440 90" preserveAspectRatio="none">
+    <!-- Bottom Curve (EXACT LIKE ABOUT US) -->
+    <svg class="contact-curve" viewBox="0 0 1440 120" preserveAspectRatio="none">
         <path fill="#ffffff"
-              d="M0,40
-                 C240,70 480,70 720,55
-                 960,40 1200,25 1440,40
-                 L1440,0 L0,0 Z"/>
+              d="M0,64 
+                 C240,100 480,100 720,80 
+                 960,60 1200,40 1440,60 
+                 L1440,120 
+                 L0,120 Z">
+        </path>
     </svg>
 
 </section>
