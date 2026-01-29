@@ -3,6 +3,13 @@
 .animate-right {
   opacity: 0;
 }
+.hero-content h1
+{
+	font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 56px;
+  color: #00253e;
+}
 
 /* show on scroll */
 .animate-left.show {
