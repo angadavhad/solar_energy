@@ -62,3 +62,59 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const counters = document.querySelectorAll(".counter");
+  let started = false;
+
+  function startCounting() {
+
+    counters.forEach(counter => {
+
+      const target = parseFloat(counter.dataset.target);
+      const suffix = counter.dataset.suffix || "";
+
+      let count = 0;
+      const speed = 80; // ✅ Slower + Smooth
+
+      function update() {
+        const increment = target / speed;
+        count += increment;
+
+        if (count < target) {
+
+          let value =
+            target % 1 !== 0
+              ? count.toFixed(1)
+              : Math.floor(count);
+
+          counter.innerText = value + suffix;
+
+          requestAnimationFrame(update);
+
+        } else {
+          counter.innerText = target + suffix;
+        }
+      }
+
+      update();
+    });
+
+  }
+
+  window.addEventListener("scroll", () => {
+
+    const section = document.querySelector(".stats-wave-section");
+    const top = section.getBoundingClientRect().top;
+
+    if (!started && top < window.innerHeight - 150) {
+      started = true;
+      startCounting();
+    }
+
+  });
+
+});

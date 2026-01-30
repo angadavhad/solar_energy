@@ -8,7 +8,7 @@
     <div class="overlay"></div>
 
     <div class="hero-content">
-        <h1>About Us</h1>
+        <h1>Our Blogs</h1>
     </div>
 
     <div class="triangle-curve"></div>

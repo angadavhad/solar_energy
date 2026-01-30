@@ -64,34 +64,35 @@
       </p>
 
       <!-- ✅ Button Added Here -->
-      <a href="about.html" class="main-btn">Learn More</a>
+      <a href="<?= base_url('user/about') ?>" class="main-btn">Learn More</a>
 
 
     </div>
 
   </div>
 </section>
-<!-- STATS WAVE SECTION -->
 <section class="stats-wave-section">
   <div class="stats-container">
 
     <div class="stat-box">
-      <h2>1.3</h2>
+      <h2 class="counter" data-target="1.3" data-suffix="">0</h2>
       <p>Tons Of Carbon Footprint Eliminated</p>
     </div>
 
     <div class="stat-box">
-      <h2>400</h2>
+      <h2 class="counter" data-target="400" data-suffix="+">0</h2>
       <p>Solar PV Installed</p>
     </div>
 
     <div class="stat-box">
-      <h2>60%</h2>
+      <h2 class="counter" data-target="60" data-suffix="%">0</h2>
       <p>Lower Electricity Consumption</p>
     </div>
 
   </div>
 </section>
+
+
 
 
   <!-- ===== PRODUCTS SECTION ===== -->
@@ -112,7 +113,7 @@
       </p>
 
       <!-- ✅ Button Below Description -->
-      <a href="products.html" class="main-btn">View Products</a>
+      <a href="<?= base_url('user/product') ?>" class="main-btn">View Products</a>
 
     </div>
 
@@ -150,7 +151,7 @@
       </p>
 
       <!-- ✅ Button Below Description -->
-      <a href="services.html" class="main-btn">Explore Services</a>
+      <a href="<?= base_url('user/services') ?>" class="main-btn">Explore Services</a>
 
     </div>
 
@@ -182,7 +183,7 @@
               Choose Maha Solar Systems
             </p>
 
-            <a href="#" class=" blog-btn">Read Blogs</a>
+            <a href="<?= base_url('user/blogs') ?>" class="blog-btn">Read Blogs</a>
           </div>
         </div>
       </div>
@@ -200,8 +201,7 @@
             <p class="card-text text-muted">
               Choose Maha Solar Systems
             </p>
-
-            <a href="#" class=" blog-btn">Read Blogs</a>
+<a href="<?= site_url('user/blogs') ?>" class="blog-btn">Read Blogs</a>
           </div>
         </div>
       </div>
@@ -220,7 +220,7 @@
               Choose Maha Solar Systems
             </p>
 
-            <a href="#" class="blog-btn">Read Blogs</a>
+      <a href="<?= site_url('user/blogs')?>" class=" blog-btn">Read Blogs</a>
           </div>
         </div>
       </div>
@@ -236,7 +236,7 @@
 
     <!-- Left Image -->
     <div class="hero-banner-img">
-        <img src="<?= base_url('assets/image/CONNECT.png') ?>" alt="Solar Banner">
+        <img src="<?= site_url('assets/image/CONNECT.png') ?>" alt="Solar Banner">
       </div>
 
     <!-- Center Text -->
@@ -250,7 +250,7 @@
 
     <!-- Right Button -->
     <div class="hero-banner-btn">
-      <a href="#" class="connect-btn">
+      <a href="<?=base_url('user/contact') ?>" class="connect-btn">
         <i class="fa-solid fa-phone"></i>
         CONNECT WITH US
       </a>
