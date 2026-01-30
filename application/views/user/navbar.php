@@ -119,7 +119,12 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
      Contact
   </a>
 
-  <a href="<?= base_url('user/quote') ?>" class="ms-btn">Get Quote</a>
+<a href="javascript:void(0)"
+   class="ms-btn"
+   data-bs-toggle="modal"
+   data-bs-target="#quoteModal">
+   Get Quote
+</a>
 </nav>
 
 

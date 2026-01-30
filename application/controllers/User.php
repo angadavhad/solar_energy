@@ -81,8 +81,6 @@ class User extends CI_Controller {
         $this->load->view("user/industrial");
         $this->load->view("user/footer");
     }
-    
-
     public function residential(){
     $this->load->view("user/navbar");
     $this->load->view("user/residential");
@@ -101,11 +99,6 @@ public function contact(){
     $this->load->view("user/footer");
 }
 
-public function quote(){
-    $this->load->view("user/navbar");
-    $this->load->view("user/quote");
-    $this->load->view("user/footer");
-}
 
 public function blogs_details($id){
     // $data['blog']=$this->My_model->get_blog_details($id);
