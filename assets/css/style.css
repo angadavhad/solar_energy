@@ -627,6 +627,88 @@ section {
   }
 }
 
+/* ===== Quote Modal Design ===== */
+#quoteModal .modal-content {
+  border-radius: 14px;
+  border: none;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
 
+#quoteModal .modal-header {
+  border-bottom: 1px solid #eee;
+  padding: 18px 24px;
+}
+
+#quoteModal .modal-title {
+  font-weight: 600;
+  color: #110674;
+}
+
+#quoteModal .modal-body {
+  padding: 24px;
+}
+
+#quoteModal .form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+#quoteModal .form-control,
+#quoteModal .form-select {
+  border-radius: 8px;
+  height: 44px;
+}
+
+#quoteModal textarea.form-control {
+  height: auto;
+  resize: none;
+}
+
+/* Checkbox spacing */
+#quoteModal .form-check {
+  margin-bottom: 6px;
+}
+
+/* ===== Gradient Submit Button ===== */
+.quote-submit-btn {
+  background: linear-gradient(260deg, #eb8715, #110674);
+  border: none;
+  color: #fff;
+  padding: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.quote-submit-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(17,6,116,0.4);
+}
+@media (max-width: 768px) {
+  #quoteModal .modal-dialog {
+    margin: 10px;
+  }
+
+  #quoteModal .modal-body {
+    padding: 16px;
+  }
+
+  #quoteModal .modal-title {
+    font-size: 16px;
+  }
+
+  #quoteModal .form-control,
+  #quoteModal .form-select {
+    height: 42px;
+  }
+
+  .quote-submit-btn {
+    font-size: 15px;
+    padding: 11px;
+  }
+}
 
 
