@@ -1,4 +1,7 @@
 <section class="services-strip">
+
+
+
   <div class="container-fluid">
 
     <!-- Row 1 -->
