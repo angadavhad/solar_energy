@@ -1,3 +1,9 @@
+
+.text-center
+{
+	font-family: poppins !important ;
+}
+
 /* Grey strip */
 .strip-row {
   position: relative;
