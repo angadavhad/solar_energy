@@ -1,197 +1,159 @@
-
-/* ================= COMMON ================= */
-.container{
-  max-width:1200px;
-  margin:auto;
-  padding:60px 20px;
-}
-
-h1,h2,h3{
-  color:#03213f;
-}
-
-/* ================= SERVICES HERO ONLY ================= */
-
-.services-hero{
+/* Grey strip */
+.strip-row {
   position: relative;
-  height: 70vh;
+  background: #efefef;
+  height: 160px;
+  margin-bottom: 60px;
   overflow: hidden;
 }
 
-/* SLIDES – ONLY inside services hero */
-.services-hero .hero-slide{
+/* SINGLE wave image (no repeat) */
+.wave-bg {
+  display: block;
   position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transform: scale(1);
-  transition: opacity 1s ease, transform 6s ease;
-}
-
-.services-hero .hero-slide.active{
-  opacity: 1;
-  transform: scale(1.1);
-}
-
-/* CONTENT */
-.services-hero .hero-content{
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  background: linear-gradient(
-    rgba(212, 201, 97, 0.88),
-    rgba(233, 230, 51, 0.9)
-  );
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-/* CURVE */
-.services-hero .hero-curve{
-  position: absolute;
-  bottom: 0;
   left: 0;
-  width: 100%;
-  height: 120px;
-  background: #fff;
-  z-index: 3;
-  clip-path: polygon(0 0,50% 100%,100% 0,100% 100%,0 100%);
+  right: 0;
+  bottom: 0;
+  height: 110px;
+
+  background-image: url("../image/Wave.jpg");
+  background-repeat: no-repeat;        /* 🔥 IMPORTANT */
+  background-position: center bottom;
+  background-size: 100% 100%;          /* full width, single image */
+
+  opacity: 0.6;
+  z-index: 1;
 }
 
-/* RESPONSIVE */
-@media(max-width:768px){
-  .services-hero{ height:55vh; }
-  .services-hero .hero-curve{ height:70px; }
+/* Service buttons */
+.service-box {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: #f6b700;
+  color: #fff;
+  padding: 12px 32px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  z-index: 2;
+	text-decoration: none;
 }
 
-/* ================= SOLAR GALLERY ================= */
-/* ================= SERVICE FIT ================= */
-/* ================= SERVICES CARDS ================= *//* ================= SERVICES CARDS ================= */
-.services-list{
-  padding:70px 0;
-  background:#eff6fa;
+/* Positions */
+.service-box.left { left: 60px; }
+.service-box.center {
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+.service-box.right { right: 60px; }
 
-.services-list .container{
-  max-width:1200px;
-  margin:auto;
-  padding:0 20px;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:30px;
-}
-
-/* CARD */
-.service-card{
-  background:#f1fbfd;
-  border-radius:16px;
-  overflow:hidden;
-  border:1px solid #d3d9df;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
-  transition:all .35s ease;
-}
-
-/* IMAGE */
-.card-img{
-  height:200px;
-  overflow:hidden;
-}
-
-.card-img img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:transform .5s ease;
-}
-
-/* BODY */
-.card-body{
-  padding:26px 22px;
-  text-align:center;
-}
-
-.service-card h3{
-  margin-top: 10px;
-  font-size:22px;
-  margin-bottom:10px;
-  color:#0b2c4d;
-}
-
-.service-card p{
-  font-size:15px;
-  color:#555;
-  line-height:1.6;
-  margin-bottom:20px;
-}
-
-/* BUTTON */
-.service-card .btn-primary{
-  display:inline-block;
-  padding:11px 32px;
-  margin-bottom: 40px;
-  background:linear-gradient(260deg,#94b4ee,#f0a61c);
-  color:#111;
-  font-weight:600;
-  border-radius:6px;
-  text-decoration:none;
-  transition:.3s ease;
-}
-
-/* HOVER */
-.service-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 18px 38px rgba(0,0,0,0.15);
-}
-
-.service-card:hover .card-img img{
-  transform:scale(1.08);
-}
-
-.service-card:hover .btn-primary{
-  background:linear-gradient(260deg,#8591fd,#f0a61c);
-}
-
-/* ================= RESPONSIVE ================= */
-
-/* TABLET */
-@media (max-width:991px){
-  .services-list .container{
-    grid-template-columns:repeat(2,1fr);
+/* Mobile */
+@media (max-width: 768px) {
+  .strip-row {
+    height: auto;
+    padding: 50px 0;
   }
 
-  .card-img{
-    height:180px;
+  .wave-bg {
+    height: 80px;
+  }
+
+  .service-box {
+    position: static;
+    transform: none;
+    margin: 15px auto;
+    display: block;
   }
 }
 
-/* MOBILE */
-@media (max-width:600px){
-  .services-list{
-    padding:50px 0;
-  }
+/* Bottom row buttons wall-type center */
+.strip-row:last-child .service-box.left {
+  left: 23%;
+  transform: translate(-130%, -50%);
+}
 
-  .services-list .container{
-    grid-template-columns:1fr;
-  }
+.strip-row:last-child .service-box.center {
+  left: 65%;
+  transform: translate(30%, -50%);
+}
 
-  .card-img{
-    height:160px;
-  }
+/* ================= BUTTON SLIDE ANIMATION ================= */
 
-  .service-card h3{
-    font-size:20px;
+/* Left side animation */
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translate(-80px, -50%);
   }
-
-  .service-card p{
-    font-size:14px;
-  }
-
-  .service-card .btn-primary{
-    padding:10px 26px;
-    font-size:14px;
+  to {
+    opacity: 1;
+    transform: translate(0, -50%);
   }
 }
+
+/* Right side animation */
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translate(80px, -50%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, -50%);
+  }
+}
+
+/* -------- TOP ROW -------- */
+
+/* Left button → left side ne yenar */
+.strip-row:first-child .service-box.left {
+  animation: slideFromLeft 0.8s ease forwards;
+}
+
+/* Right button → right side ne yenar */
+.strip-row:first-child .service-box.right {
+  animation: slideFromRight 0.8s ease forwards;
+}
+
+/* Middle button (top row) → NO animation */
+.strip-row:first-child .service-box.center {
+  opacity: 1;
+}
+
+/* -------- BOTTOM ROW -------- */
+
+/* Bottom left button → left side ne yenar */
+.strip-row:last-child .service-box.left {
+  animation: slideFromLeft 0.8s ease forwards;
+}
+
+/* Bottom right button (center class) → right side ne yenar */
+.strip-row:last-child .service-box.center {
+  animation: slideFromRight 0.8s ease forwards;
+}
+
+/* Mobile var animation band */
+@media (max-width: 768px) {
+  .service-box {
+    animation: none !important;
+  }
+}
+
+/* ================= INDUSTRIAL BLINK ================= */
+
+@keyframes industrialBlink {
+  0% {
+    box-shadow: 0 0 0 rgba(246,183,0, 0.7);
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(246,183,0, 0.9);
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(246,183,0, 0.7);
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
