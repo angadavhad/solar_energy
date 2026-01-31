@@ -86,39 +86,163 @@
 	clip-path: polygon(50% 90%, 100% 70%, 100% 100%, 0 100%, 0 70%);
 	z-index: 4;
 }
-/* ===============================
-   GLOBAL BASICS
-================================ */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+
+.vision .title {
+	color: rgb(9, 87, 118);
 }
 
-/* ===============================
-   COLORS / COMMON TEXT
-================================ */
-.vision .title{
-  color:#095776;
+.brand_name {
+	color: rgb(230, 183, 59);
 }
 
-.brand_name{
-  color:#e6b73b;
+.counter {
+	color: rgb(0, 76, 137);
+	font-size: 55px;
+	font-weight: 700;
+	background-color: #8cb3da;
 }
 
-/* ===============================
-   BRAND & VISION SECTIONS
-================================ */
-.brand-section{
-  background:#fcfbea59;
+
+
+.unit {
+	color: rgb(0, 76, 137);
+	font-size: 55px;
+	font-weight: 700;
+}
+.stats-section .title {
+	font-size: 40px;
+	font-weight: 500;
+	color: rgb(0, 76, 137);
 }
 
-.vision-section{
-  background:#e4ecf3;
-  padding:60px 0;
+.count_desc {
+	font-size: 20px;
+	font-weight: 500;
 }
 
-/* IMAGE CARD (Our Brand / Vision) */
+.team_member img {
+	height: 215;
+	width: 248px;
+}
+
+.our_team .title {
+	color: rgb(0, 76, 137);
+	font-size: 40px;
+	font-weight: 500;
+	text-align: center;
+}
+
+.business_verticals {
+	background-color: #f8f9fa;
+}
+
+.vertical-card {
+	border: none;
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+	transition: all 0.35s ease;
+}
+
+.vertical-card:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 22px 45px rgba(0, 0, 0, 0.15);
+}
+
+.vertical-card img {
+	height: 220px;
+	object-fit: cover;
+}
+
+.vertical-card .card-title {
+	font-weight: 600;
+	color: rgb(0, 76, 137);
+}
+
+.vertical-card .card-text {
+	color: #555;
+	font-size: 0.95rem;
+}
+
+@media (max-width: 767px) {
+	.vertical-card img {
+		height: 200px;
+	}
+}
+
+.stats-ui {
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+.stats-title {
+	margin-bottom: 50px;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+}
+
+.stats-col {
+	padding: 15px;
+}
+
+/* Card */
+.stats-card {
+	background: #ffffff;
+	border-radius: 18px;
+	padding: 40px 25px;
+	height: 100%;
+	box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+	transition: all 0.35s ease;
+}
+
+.stats-card:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* Number layout */
+.stats-number {
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+	gap: 6px;
+	margin-bottom: 12px;
+}
+
+.stats-ui .counter,
+.stats-ui .unit {
+	font-size: 52px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+/* Description */
+.stats-ui .count_desc {
+	font-size: 18px;
+	font-weight: 500;
+	color: #555;
+	margin: 0;
+}
+
+/* Mobile tuning */
+@media (max-width: 767px) {
+	.stats-ui {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+
+	.stats-ui .counter,
+	.stats-ui .unit {
+		font-size: 42px;
+	}
+
+	.stats-ui .count_desc {
+		font-size: 16px;
+	}
+}
+
+
+
+
+
 .image-card{
   display:inline-block;
   background:#fff;
@@ -126,75 +250,183 @@
   border-radius:18px;
   border:1px solid rgba(0,0,0,0.08);
   box-shadow:0 18px 40px rgba(0,0,0,0.15);
-  transition:transform .35s ease, box-shadow .35s ease;
+  transition:all .4s ease;
 }
 
 .image-card img{
-  max-width:100%;
   border-radius:14px;
+  max-width:100%;
 }
+
+.image-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 26px 55px rgba(0,0,0,0.22);
+}
+
+.vision-section{
+  background:#e4ecf3;
+  padding:60px 0;
+}
+.brand-section{
+  background:#fcfbea59;
+ 
+}/* ===============================
+   TEAM SECTION (FINAL CLEAN)
+================================ */
+/* ===============================
+   TEAM SECTION
+================================ */
 
 /* ===============================
-   MEET OUR TEAM
+   BUSINESS VERTICALS – CARD BASE
 ================================ */
-.team-ui{
-  padding:70px 0 90px;
-  background:transparent;
+/* RESET *//* ===============================
+   BUSINESS VERTICALS – FINAL CARD
+================================ */
+
+.business_verticals .card{
+  position: relative;
+  background: transparent;
+  border-radius: 20px;
+  overflow: visible !important;
+
+  /* light border */
+  border: 1px solid rgba(0,0,0,0.08);
+
+  /* STRONG + CLEAN SHADOW */
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.25),
+    0 12px 30px rgba(0, 76, 137, 0.18);
+
+  transition: all 0.35s ease;
 }
 
+/* INNER WHITE CARD */
+.business_verticals .card::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  border-radius: 18px;
+  z-index: 1;
+}
+
+/* BOTTOM COLOR BORDER */
+.business_verticals .card::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -18px;
+  height: 80px;
+  border-radius: 0 0 22px 22px;
+  z-index: 0;
+}
+
+/* CARD CONTENT ABOVE */
+.business_verticals .card img,
+.business_verticals .card-body{
+  position: relative;
+  z-index: 2;
+}
+
+/* SPACE FOR COLOR BORDER */
+.business_verticals .card-body{
+  padding-bottom: 110px;
+}
+
+/* COLORS */
+.business_verticals .col-md-4:nth-child(1) .card::after{
+  background: #f6a11a; /* ORANGE */
+}
+
+.business_verticals .col-md-4:nth-child(2) .card::after{
+  background: #1e88e5; /* BLUE */
+}
+
+.business_verticals .col-md-4:nth-child(3) .card::after{
+  background: #f6a11a; /* ORANGE */
+}
+
+.team-ui{
+  background:#ebf1b000;
+  padding:70px 0 90px;
+}
+
+/* TITLE */
 .team-title{
   text-align:center;
   font-size:40px;
   font-weight:600;
   color:#004c89;
-  margin-bottom:110px;
+  margin-bottom:110px; /* image overlap space */
 }
 
-/* ROW */
+/* ROW – 3 cards in one line */
 .team-row{
   display:flex;
   justify-content:center;
   gap:30px;
+  flex-wrap:nowrap;
 }
 
-/* TEAM CARD */
+/* ===============================
+   TEAM CARD
+================================ */
 .team-card-new{
-  width:250px;
-  min-height:300px;
-  padding:85px 20px 35px;
-  background:#fff;
+  background:#ffffff;
+  width:250px;              /* width fixed */
+  min-height:300px;         /* height कमी केली */
+  padding:85px 20px 35px;   /* top space image साठी */
   border-radius:20px;
   position:relative;
   text-align:center;
-  border:1px solid rgba(0,0,0,0.08);
-  box-shadow:
-    0 25px 55px rgba(0,0,0,0.22),
-    0 10px 25px rgba(0,76,137,0.12);
-  transition:transform .35s ease, box-shadow .35s ease;
+border:1px solid rgba(0,0,0,0.08);
+
+box-shadow:
+  0 25px 55px rgba(0, 0, 0, 0.22),
+  0 10px 25px rgba(0, 76, 137, 0.12);
+
+transition:0.35s ease;
+
 }
 
-/* IMAGE OUTSIDE CARD */
+.team-card-new:hover{
+  transform:translateY(-10px);
+  box-shadow:
+    0 35px 70px rgba(0, 0, 0, 0.30),
+    0 14px 30px rgba(0, 76, 137, 0.18);
+}
+
+
+/* ===============================
+   IMAGE (OUTSIDE CARD)
+================================ */
 .team-img-wrap{
-  width:130px;
+  width:130px;          /* थोडी small */
   height:130px;
-  background:#fff;
+  background:#ffffff;
   border-radius:50%;
   padding:6px;
+
   position:absolute;
   top:-65px;
   left:50%;
   transform:translateX(-50%);
+
   box-shadow:0 10px 22px rgba(0,0,0,0.15);
 }
 
 .team-img-wrap img{
   width:100%;
   height:100%;
-  object-fit:cover;
   border-radius:50%;
+  object-fit:cover;
 }
 
-/* TEXT */
+/* ===============================
+   TEXT
+================================ */
 .team-name{
   font-size:19px;
   font-weight:600;
@@ -213,7 +445,9 @@
   color:#777;
 }
 
-/* LINES */
+/* ===============================
+   DECORATIVE LINES
+================================ */
 .line{
   width:55px;
   height:3px;
@@ -228,96 +462,10 @@
 }
 
 /* ===============================
-   BUSINESS VERTICALS
-================================ */
-.business_verticals{
-  background:#f8f9fa;
-}
-
-.business_verticals .card{
-  position:relative;
-  background:transparent;
-  border-radius:20px;
-  overflow:visible;
-  border:1px solid rgba(0,0,0,0.08);
-  box-shadow:
-    0 30px 60px rgba(0,0,0,0.25),
-    0 12px 30px rgba(0,76,137,0.18);
-  transition:transform .35s ease, box-shadow .35s ease;
-}
-
-/* INNER WHITE CARD */
-.business_verticals .card::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:#fff;
-  border-radius:18px;
-  z-index:1;
-}
-
-/* BOTTOM COLOR BORDER */
-.business_verticals .card::after{
-  content:"";
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:-18px;
-  height:80px;
-  border-radius:0 0 22px 22px;
-  z-index:0;
-}
-
-/* CONTENT ABOVE */
-.business_verticals .card img,
-.business_verticals .card-body{
-  position:relative;
-  z-index:2;
-}
-
-.business_verticals .card-body{
-  padding-bottom:110px;
-}
-
-/* COLORS */
-.business_verticals .col-md-4:nth-child(1) .card::after{
-  background:#f6a11a;
-}
-.business_verticals .col-md-4:nth-child(2) .card::after{
-  background:#1e88e5;
-}
-.business_verticals .col-md-4:nth-child(3) .card::after{
-  background:#f6a11a;
-}
-
-/* ===============================
-   HOVER (DESKTOP ONLY)
-================================ */
-@media(min-width:769px){
-  .image-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 26px 55px rgba(0,0,0,0.22);
-  }
-
-  .team-card-new:hover{
-    transform:translateY(-10px);
-    box-shadow:
-      0 35px 70px rgba(0,0,0,0.30),
-      0 14px 30px rgba(0,76,137,0.18);
-  }
-
-  .business_verticals .card:hover{
-    transform:translateY(-8px);
-  }
-}
-
-/* ===============================
-   MOBILE OPTIMIZATION
+   RESPONSIVE
 ================================ */
 @media(max-width:768px){
-  /* Team */
   .team-title{
-    font-size:32px;
     margin-bottom:80px;
   }
 
@@ -329,23 +477,5 @@
   .team-card-new{
     width:100%;
     max-width:320px;
-    transition:none;
-    box-shadow:
-      0 18px 36px rgba(0,0,0,0.20),
-      0 8px 18px rgba(0,76,137,0.12);
-  }
-
-  /* Business Verticals */
-  .business_verticals .card{
-    transition:none;
-    box-shadow:
-      0 16px 32px rgba(0,0,0,0.18),
-      0 6px 16px rgba(0,76,137,0.10);
-  }
-
-  /* Image Card */
-  .image-card{
-    transition:none;
-    box-shadow:0 14px 28px rgba(0,0,0,0.18);
   }
 }
