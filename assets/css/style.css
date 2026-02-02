@@ -47,7 +47,7 @@ section {
   display: inline-block;
   padding: 14px 42px;
   border-radius: 30px;
-  background: linear-gradient(260deg, #eb8715, #110674);
+  background-color: #0035aa;
   color: white;
   font-size: 16px;
   font-weight: 600;
@@ -379,7 +379,7 @@ section {
   padding: 15px 40px;
   border-radius: 50px;
 
-  background: linear-gradient(260deg, #eb8715, #110674);
+  background-color: #0035aa;
   color: white;
 
   font-size: 15px;
@@ -563,8 +563,8 @@ section {
 
 /* Button */
 .blog-btn {
- background: linear-gradient(260deg, #d38935, #110674);
-   color: lch(100% 0.01 296.81);
+ background-color: #0035aa;
+   color: white;
 
   padding: 10px 28px;
   border-radius: 6px;
@@ -573,7 +573,7 @@ section {
 }
 
 .blog-btn:hover {
-  background:linear-gradient(260deg, #d38935, #110674)
+  background-color: #002a88;
 }
 
 /* ================= TESTIMONIALS SECTION ================= */
@@ -583,7 +583,7 @@ section {
   font-family: "Poppins", sans-serif;
 
   /* ✅ Background Image */
-  background: linear-gradient(to right, #fff8f0, #fdf3ff);
+  background: linear-gradient(to right,  #fff8f0, #fdf3ff);
 
   position: relative;
 }
