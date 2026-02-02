@@ -54,7 +54,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Logo -->
 <div class="ms-logo">
-  <span>convex</span>
+  <img src='<?=base_url()?>assets/image/web_logo.png' alt="Convex Solar Solutions Logo">
 </div>
 
 <!-- Menu -->

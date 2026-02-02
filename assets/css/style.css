@@ -583,8 +583,7 @@ section {
   font-family: "Poppins", sans-serif;
 
   /* ✅ Background Image */
-  background: url("../image/People.jpg") no-repeat center;
-  background-size: cover;
+  background: linear-gradient(to right, #fff8f0, #fdf3ff);
 
   position: relative;
 }

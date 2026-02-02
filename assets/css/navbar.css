@@ -6,7 +6,7 @@
 }
 
 .ms-navbar{
-  background-color: #0035aa !important;	
+  background-color: #01329f !important;	
   border-bottom:2px solid transparent;
   border-image:linear-gradient(260deg,#3df2f2,#0f0f0f) 4;
   position:sticky;
@@ -227,3 +227,19 @@
   from{opacity:0;transform:translateY(-10px);}
   to{opacity:1;transform:translateY(0);}
 }
+
+/* ================= LOGO ================= */
+
+.ms-logo img{
+  height:52px;        /* desktop size */
+  width:auto;
+  object-fit:contain;
+  display:block;
+}
+
+@media(max-width:575px){
+  .ms-logo img{
+    height:42px;
+  }
+}
+
