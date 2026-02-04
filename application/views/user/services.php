@@ -20,8 +20,8 @@
     <div class="strip-row">
   <span class="wave-bg"></span>
 
-  <a href="<?= base_url('user/healthcare') ?>" class="service-box left">Healthcare</a>
-  <a href="<?= base_url('user/hospitality') ?>" class="service-box center">Hospitality</a>
+  <a href="<?= base_url('user/residential') ?>" class="service-box left">Healthcare</a>
+  <a href="<?= base_url('user/commercial') ?>" class="service-box center">Hospitality</a>
 </div>
 
   </div>
