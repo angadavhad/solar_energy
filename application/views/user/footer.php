@@ -124,6 +124,17 @@
     </div>
   </div>
 </div>
+<!-- WhatsApp Floating Button -->
+<a href="https://api.whatsapp.com/send?phone=9850400900&text=Hi%2C%20I%20want%20to%20know%20about%20your%20services"
+   target="_blank"
+   class="whatsapp-float">
+
+   <i class="fa-brands fa-whatsapp"></i>
+   <span class="whatsapp-text">Connect with us</span>
+</a>
+
+</body>
+</html>
 
 <script>
 function submitQuote() {

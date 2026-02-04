@@ -15,6 +15,15 @@
 </head>
 <body>
 
+<!-- <a href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20know%20about%20your%20services"
+   target="_blank"
+   class="whatsapp-float">
+   
+   <i class="fa fa-whatsapp"></i>
+   <span class="whatsapp-text">Connect with us</span>
+</a> -->
+
+
  <!-- ✅ HERO SECTION -->
 <section class="hero-section">
 
