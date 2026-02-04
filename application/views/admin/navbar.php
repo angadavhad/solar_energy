@@ -15,8 +15,8 @@
   <!-- SIDEBAR -->
   <nav id="sidebar" class="sidebar js-sidebar">
     <div class="sidebar-content">
-      <a class="sidebar-brand" href="dashboard.php">
-        <span class="align-middle">Solar Project</span>
+      <a class="sidebar-brand" href="<?=base_url()?>admin">
+        <span class="align-middle" style="letter-spacing:3px;">Solar Project</span>
       </a>
 
       <ul class="sidebar-nav">
@@ -27,16 +27,43 @@
         </li>
 
         <li class="sidebar-item">
-          <a class="sidebar-link" href="blog.php">
-            <span class="align-middle">Blog</span>
-          </a>
-        </li>
+  <a data-bs-toggle="collapse" href="#homePages" class="sidebar-link">
+    <span class="align-middle">Home Page</span>
+  </a>
 
-        <li class="sidebar-item">
-          <a class="sidebar-link" href="contact.php">
-            <span class="align-middle">Contact</span>
-          </a>
-        </li>
+  <ul id="homePages" class="sidebar-dropdown list-unstyled collapse">
+    <li class="sidebar-item">
+      <a class="sidebar-link" href="home-hero.php">Hero Section</a>
+    </li>
+
+    <li class="sidebar-item">
+      <a class="sidebar-link" href="home-about.php">About Section</a>
+    </li>
+
+    <li class="sidebar-item">
+      <a class="sidebar-link" href="home-services.php">Services</a>
+    </li>
+
+    <li class="sidebar-item">
+      <a class="sidebar-link" href="home-projects.php">Projects</a>
+    </li>
+
+    <li class="sidebar-item">
+      <a class="sidebar-link" href="home-blog.php">Blog</a>
+    </li>
+
+    <li class="sidebar-item">
+      <a class="sidebar-link" href="home-contact.php">Contact Info</a>
+    </li>
+  </ul>
+</li> 
+
+
+
+
+
+
+
       </ul>
     </div>
   </nav>

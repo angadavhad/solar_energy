@@ -7,7 +7,7 @@
 
     <div class="card">
       <div class="card-body">
-        <h4>Solar Energy Project</h4>
+        <h4 >Solar Energy Project</h4>
         <p>
           This dashboard is part of a Solar Energy Management System.
           It is used to monitor and manage information related to solar energy,
@@ -21,7 +21,9 @@
           <li>Backend will be developed using PHP & MySQL</li>
         </ul>
       </div>
-    </div>
+    </div> 
+
+
 
   </div>
 </main>

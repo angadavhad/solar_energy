@@ -3,7 +3,7 @@
         <div class="row text-muted">
           <div class="col-12 text-center">
             <p class="mb-0">
-              © <?php echo date("Y"); ?> Solar Energy Project | Developed by You
+              © <?php echo date("Y"); ?> Solar Energy Project | Developed by A2z It Hub
             </p>
           </div>
         </div>
