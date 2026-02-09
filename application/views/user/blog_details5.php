@@ -3,7 +3,7 @@
 
     <!-- BLOG IMAGE -->
     <div class="blog-details-image">
-      <img src="<?= base_url('assets/image/blog3.jpg'); ?>" alt="Future of Solar Energy in India">
+      <img src="<?= base_url('assets/image/blog3.webp'); ?>" alt="Future of Solar Energy in India">
     </div>
 
     <!-- BLOG CONTENT -->

@@ -3,7 +3,7 @@
 
     <!-- BLOG IMAGE -->
     <div class="blog-details-image">
-      <img src="<?= base_url('assets/image/blog3.jpg'); ?>" alt="Solar Communities Ahilyanagar">
+      <img src="<?= base_url('assets/image/blog3.webp'); ?>" alt="Solar Communities Ahilyanagar">
     </div>
 
     <!-- BLOG CONTENT -->

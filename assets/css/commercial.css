@@ -20,7 +20,7 @@ h1,h2{
     rgba(212, 201, 97, 0.30),
     rgba(233, 230, 51, 0.30)
   ),
-    url("../image/commercial.jpg") center/cover no-repeat;
+    url("../image/commercial.webp") center/cover no-repeat;
 }
 
 .com-hero h1{
@@ -85,7 +85,7 @@ h1,h2{
       rgba(210,225,245,0.45),
       rgba(185,210,240,0.45)
     ),
-    url("../image/commercial.jpg") center/cover no-repeat;
+    url("../image/commercial.webp") center/cover no-repeat;
 }
 
 /* ================= SUITABLE ================= */

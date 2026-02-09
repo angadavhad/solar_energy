@@ -4,9 +4,9 @@
 <!-- Section I -->
 <section class="about-hero">
     <div class="slides">
-        <div class="slide active" style="background-image:url('<?= base_url('assets/image/about_bg1.jpg'); ?>')"></div>
-        <div class="slide" style="background-image:url('<?= base_url('assets/image/about_bg2.jpg'); ?>')"></div>
-        <div class="slide" style="background-image:url('<?= base_url('assets/image/about_bg3.jpg'); ?>')"></div>
+        <div class="slide active" style="background-image:url('<?= base_url('assets/image/about_bg1.webp'); ?>')"></div>
+        <div class="slide" style="background-image:url('<?= base_url('assets/image/about_bg2.webp'); ?>')"></div>
+        <div class="slide" style="background-image:url('<?= base_url('assets/image/about_bg3.webp'); ?>')"></div>
     </div>
 
     <div class="overlay"></div>
@@ -39,7 +39,7 @@
     <!-- IMAGE -->
     <div class="col-12 col-md-6 text-center">
       <div class="image-card">
-        <img src="<?= base_url('assets/image/about_brand_img.png') ?>"
+        <img src="<?= base_url('assets/image/about_brand_img.webp') ?>"
              class="img-fluid" alt="Our Brand">
       </div>
     </div>
@@ -56,7 +56,7 @@
     <!-- IMAGE -->
     <div class="col-12 col-md-6 text-center">
       <div class="image-card">
-        <img src="<?= base_url('assets/image/about_brand_img.png') ?>"
+        <img src="<?= base_url('assets/image/about_brand_img.webp') ?>"
              class="img-fluid" alt="Our Brand">
       </div>
     </div>
@@ -83,7 +83,7 @@
       <!-- CARD 1 -->
       <div class="team-card-new">
         <div class="team-img-wrap">
-          <img src="<?= base_url('assets/image/man1.jpg') ?>" alt="John Doe">
+          <img src="<?= base_url('assets/image/man1.webp') ?>" alt="John Doe">
         </div>
         <h4 class="team-name">Pavan Mohite</h4>
         <div class="line"></div>
@@ -95,7 +95,7 @@
       <!-- CARD 2 -->
       <div class="team-card-new">
         <div class="team-img-wrap">
-          <img src="<?= base_url('assets/image/man2.jpg') ?>" alt="Rahul Sharma">
+          <img src="<?= base_url('assets/image/man2.webp') ?>" alt="Rahul Sharma">
         </div>
         <h4 class="team-name">Rahul Sharma</h4>
         <div class="line"></div>
@@ -107,7 +107,7 @@
       <!-- CARD 3 -->
       <div class="team-card-new">
         <div class="team-img-wrap">
-          <img src="<?= base_url('assets/image/man3.jpg') ?>" alt="Amit Patil">
+          <img src="<?= base_url('assets/image/man3.webp') ?>" alt="Amit Patil">
         </div>
         <h4 class="team-name">Amit Patil</h4>
         <div class="line"></div>
@@ -132,7 +132,7 @@
       <div class="col-12 col-md-4">
         <div class="bv-box orange">
           <div class="bv-content">
-            <img src="<?= base_url('assets/image/vertical1.jpg') ?>" alt="">
+            <img src="<?= base_url('assets/image/vertical1.webp') ?>" alt="">
             <h5>Card Title</h5>
             <p>
               Some quick example text to build on the card title and make up
@@ -145,7 +145,7 @@
       <div class="col-12 col-md-4">
         <div class="bv-box red">
           <div class="bv-content">
-            <img src="<?= base_url('assets/image/vertical1.jpg') ?>" alt="">
+            <img src="<?= base_url('assets/image/vertical1.webp') ?>" alt="">
             <h5>Card Title</h5>
             <p>
               Some quick example text to build on the card title and make up
@@ -158,7 +158,7 @@
       <div class="col-12 col-md-4">
         <div class="bv-box yellow">
           <div class="bv-content">
-            <img src="<?= base_url('assets/image/vertical1.jpg') ?>" alt="">
+            <img src="<?= base_url('assets/image/vertical1.webp') ?>" alt="">
             <h5>Card Title</h5>
             <p>
               Some quick example text to build on the card title and make up

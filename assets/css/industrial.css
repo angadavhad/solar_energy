@@ -17,7 +17,7 @@ h1,h2{
   align-items:center;
   background:
     linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
-    url("../image/industrial.jpg") center/cover no-repeat;
+    url("../image/industrial.webp") center/cover no-repeat;
 }
 
 .ind-hero .container{

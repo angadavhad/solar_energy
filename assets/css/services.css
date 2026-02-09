@@ -22,7 +22,7 @@
   bottom: 0;
   height: 110px;
 
-  background-image: url("../image/Wave.jpg");
+  background-image: url("../image/Wave.webp");
   background-repeat: no-repeat;        /* 🔥 IMPORTANT */
   background-position: center bottom;
   background-size: 100% 100%;          /* full width, single image */

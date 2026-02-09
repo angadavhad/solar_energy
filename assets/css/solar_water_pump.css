@@ -9,7 +9,7 @@
 /* COMMON IMAGE PIECE */
 .img-piece {
   position: absolute;
-  background-image: url("../image/subpump.jpg");
+  background-image: url("../image/subpump.webp");
   background-size: 100% 100%;
   opacity: 0;
 }

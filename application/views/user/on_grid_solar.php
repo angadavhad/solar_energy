@@ -18,7 +18,7 @@
 
       <!-- IMAGE -->
       <div class="col-md-6 text-center og-reveal-right">
-        <img src="<?= base_url()?>assets/image/gridsolar.jpg"
+        <img src="<?= base_url()?>assets/image/gridsolar.webp"
              alt="On Grid Solar Power System"
              class="img-fluid rounded">
       </div>
@@ -34,7 +34,7 @@
 
       <!-- IMAGE SIDE -->
       <div class="col-md-6 mb-4 mb-md-0 og-reveal-left text-center">
-        <img src="<?= base_url()?>assets/image/solargrid.jpg"
+        <img src="<?= base_url()?>assets/image/solargrid.webp"
              alt="On Grid Solar Power Flow"
              class="img-fluid ongrid-img">
       </div>
@@ -105,7 +105,7 @@
 
       <!-- IMAGE -->
       <div class="col-md-6 mb-4 mb-md-0 og-reveal-left">
-        <img src="<?= base_url()?>assets/image/gridbenifit.jpg"
+        <img src="<?= base_url()?>assets/image/gridbenifit.webp"
              class="img-fluid rounded"
              alt="Benefits of On Grid Solar">
       </div>

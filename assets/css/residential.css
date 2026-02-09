@@ -24,7 +24,7 @@ h1,h2{
   background:
     linear-gradient(rgba(0,0,0,0.55),
                     rgba(0,0,0,0.55)),
-    url("../image/service.jpg") center/cover no-repeat;
+    url("../image/service.webp") center/cover no-repeat;
 }
 
 .res-hero h1,

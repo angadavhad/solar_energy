@@ -60,7 +60,7 @@
 
     <!-- Left Image -->
     <div class="about-image">
-      <img src="<?= base_url('assets/image/blog2.jpg') ?>" alt="About Solar">
+      <img src="<?= base_url('assets/image/blog2.webp') ?>" alt="About Solar">
     </div>
 
     <!-- Right Content -->
@@ -136,7 +136,7 @@
 
     <!-- Right Side Image -->
     <div class="products-image">
-      <img src="<?= base_url('assets/image/solar_street.jpg') ?>" alt="Solar Products">
+      <img src="<?= base_url('assets/image/solar_street.webp') ?>" alt="Solar Products">
     </div>
 
   </div>
@@ -153,7 +153,7 @@
 
     <!-- Left Side Image -->
     <div class="services-image">
-      <img src="<?= base_url('assets/image/service.jpg') ?>" alt="Services Image">
+      <img src="<?= base_url('assets/image/service.webp') ?>" alt="Services Image">
     </div>
 
     <!-- Right Side Content -->
@@ -189,7 +189,7 @@
       <!-- Card 1 -->
       <div class="col-lg-4 col-md-6">
         <div class="card blog-card shadow-lg border-0">
-          <img src="<?= base_url('assets/image/ind1.jpg') ?>" class="card-img-top" alt="Blog">
+          <img src="<?= base_url('assets/image/ind1.webp') ?>" class="card-img-top" alt="Blog">
 
           <div class="card-body text-center">
             <h5 class="card-title fw-bold">
@@ -208,7 +208,7 @@
       <!-- Card 2 -->
       <div class="col-lg-4 col-md-6">
         <div class="card blog-card shadow-lg border-0">
-          <img src="<?= base_url('assets/image/ind2.jpg') ?>" class="card-img-top" alt="Blog">
+          <img src="<?= base_url('assets/image/ind2.webp') ?>" class="card-img-top" alt="Blog">
 
           <div class="card-body text-center">
             <h5 class="card-title fw-bold">
@@ -226,7 +226,7 @@
       <!-- Card 3 -->
       <div class="col-lg-4 col-md-6">
         <div class="card blog-card shadow-lg border-0">
-          <img src="<?= base_url('assets/image/ind3.jpg') ?>" class="card-img-top" alt="Blog">
+          <img src="<?= base_url('assets/image/ind3.webp') ?>" class="card-img-top" alt="Blog">
 
           <div class="card-body text-center">
             <h5 class="card-title fw-bold">
@@ -253,7 +253,7 @@
 
     <!-- Left Image -->
     <div class="hero-banner-img">
-        <img src="<?= site_url('assets/image/CONNECT.png') ?>" alt="Solar Banner">
+        <img src="<?= site_url('assets/image/CONNECT.webp') ?>" alt="Solar Banner">
       </div>
 
     <!-- Center Text -->
@@ -478,7 +478,7 @@
     <div class="testimonial-card big-card">
 
       <div class="client-img">
-        <img src="<?= base_url('assets/image/People.jpg') ?>" alt="Client">
+        <img src="<?= base_url('assets/image/People.webp') ?>" alt="Client">
       </div>
 
       <p>
@@ -497,7 +497,7 @@
       <div class="testimonial-card small-card">
 
         <div class="client-img">
-          <img src="<?= base_url('assets/image/People.jpg') ?>" alt="Client">
+          <img src="<?= base_url('assets/image/People.webp') ?>" alt="Client">
         </div>
 
         <p>
@@ -512,7 +512,7 @@
       <div class="testimonial-card small-card">
 
         <div class="client-img">
-          <img src="<?= base_url('assets/image/People.jpg') ?>" alt="Client">
+          <img src="<?= base_url('assets/image/People.webp') ?>" alt="Client">
         </div>
 
         <p>
