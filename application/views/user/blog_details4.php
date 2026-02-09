@@ -3,7 +3,7 @@
 
     <!-- BLOG IMAGE -->
     <div class="blog-details-image">
-      <img src="<?= base_url('assets/image/blog2.jpg'); ?>" alt="Solar vs Traditional Energy Ahilyanagar">
+      <img src="<?= base_url('assets/image/blog2.webp'); ?>" alt="Solar vs Traditional Energy Ahilyanagar">
     </div>
 
     <!-- BLOG CONTENT -->

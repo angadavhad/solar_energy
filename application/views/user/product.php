@@ -3,9 +3,9 @@
 <!-- Section I -->
 <section class="about-hero">
   <div class="slides">
-    <div class="slide active" style="background-image:url('<?= base_url('assets/image/about_bg1.jpg'); ?>')"></div>
-    <div class="slide" style="background-image:url('<?= base_url('assets/image/about_bg2.jpg'); ?>')"></div>
-    <div class="slide" style="background-image:url('<?= base_url('assets/image/about_bg3.jpg'); ?>')"></div>
+    <div class="slide active" style="background-image:url('<?= base_url('assets/image/about_bg1.webp'); ?>')"></div>
+    <div class="slide" style="background-image:url('<?= base_url('assets/image/about_bg2.webp'); ?>')"></div>
+    <div class="slide" style="background-image:url('<?= base_url('assets/image/about_bg3.webp'); ?>')"></div>
   </div>
 
   <div class="overlay"></div>
@@ -26,7 +26,7 @@
 
       <!-- Image LEFT -->
       <div class="col-md-7 text-center">
-        <img src="<?=base_url()?>assets/image/solarheater.png"
+        <img src="<?=base_url()?>assets/image/solarheater.webp"
              class="img-fluid animate-left"
              alt="Solar Water Heater">
       </div>
@@ -60,7 +60,7 @@
 
       <!-- Image RIGHT -->
       <div class="col-md-7 text-center">
-        <img src="<?=base_url()?>assets/image/solarpump.png"
+        <img src="<?=base_url()?>assets/image/solarpump.webp"
              class="img-fluid animate-right"
              alt="Solar Water Pump">
       </div>
@@ -76,7 +76,7 @@
 
       <!-- Image LEFT -->
       <div class="col-md-7 text-center">
-        <img src="<?=base_url()?>assets/image/solarplant.png"
+        <img src="<?=base_url()?>assets/image/solarplant.webp"
              class="img-fluid animate-left"
              alt="On Grid Solar Plant">
       </div>
@@ -110,7 +110,7 @@
 
       <!-- Image RIGHT -->
       <div class="col-md-7 text-center">
-        <img src="<?=base_url()?>assets/image/solarlight.png"
+        <img src="<?=base_url()?>assets/image/solarlight.webp"
              class="img-fluid animate-right"
              alt="Solar Street Light">
       </div>

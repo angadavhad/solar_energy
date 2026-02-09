@@ -2,7 +2,7 @@
 
     <!-- Background Image -->
     <div class="contact-bg"
-         style="background-image:url('<?= base_url('assets/image/blog1.jpg') ?>')">
+         style="background-image:url('<?= base_url('assets/image/blog1.webp') ?>')">
     </div>
 
     <!-- Yellow Overlay -->

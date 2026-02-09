@@ -3,7 +3,7 @@
 
     <!-- BLOG IMAGE -->
     <div class="blog-details-image">
-      <img src="<?= base_url('assets/image/blog2.jpg'); ?>" alt="Solar Panel Maintenance">
+      <img src="<?= base_url('assets/image/blog2.webp'); ?>" alt="Solar Panel Maintenance">
     </div>
 
     <!-- BLOG CONTENT -->

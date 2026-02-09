@@ -27,7 +27,7 @@
     </div>
 
     <div class="res-image">
-      <img src="<?= base_url('assets/image/service.jpg') ?>" alt="Residential Solar">
+      <img src="<?= base_url('assets/image/service.webp') ?>" alt="Residential Solar">
     </div>
 
   </div>

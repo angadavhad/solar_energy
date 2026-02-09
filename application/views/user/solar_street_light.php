@@ -18,7 +18,7 @@
 
       <!-- IMAGE -->
       <div class="col-md-6 text-center ssl-reveal-right">
-        <img src="<?= base_url()?>assets/image/streetlight1.png"
+        <img src="<?= base_url()?>assets/image/streetlight1.webp"
              alt="Solar Street Light System"
              class="img-fluid ssl-img">
       </div>
@@ -59,7 +59,7 @@
 
       <!-- IMAGE -->
       <div class="col-md-6 mb-4 mb-md-0 ssl-reveal-left text-center">
-        <img src="<?= base_url()?>assets/image/streetlight3.jpg"
+        <img src="<?= base_url()?>assets/image/streetlight3.webp"
              class="img-fluid ssl-img-small"
              alt="Benefits of Solar Street Light">
       </div>

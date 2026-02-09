@@ -26,7 +26,7 @@
     </div>
 
     <div class="ind-image">
-      <img src="<?= base_url('assets/image/industrial.jpg') ?>" alt="Industrial Solar Panels">
+      <img src="<?= base_url('assets/image/industrial.webp') ?>" alt="Industrial Solar Panels">
     </div>
 
   </div>

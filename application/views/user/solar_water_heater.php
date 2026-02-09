@@ -8,7 +8,7 @@
 
       <!-- IMAGE -->
       <div class="col-md-6 mb-4 mb-md-0 text-center">
-        <img src="<?= base_url()?>assets/image/waterheater1.png"
+        <img src="<?= base_url()?>assets/image/waterheater.webp"
              alt="Convex Solar"
              class="img-fluid reveal-img">
       </div>
@@ -66,7 +66,7 @@
 
       <!-- IMAGE -->
       <div class="col-md-6 mt-4 mt-md-0 text-center">
-        <img src="<?= base_url()?>assets/image/waterheater2.jpg"
+        <img src="<?= base_url()?>assets/image/waterheater2.webp"
              alt="Convex Solar Plus"
              class="img-fluid reveal-img">
       </div>
@@ -82,7 +82,7 @@
 
       <!-- IMAGE -->
       <div class="col-md-6 mb-4 mb-md-0 text-center">
-        <img src="<?= base_url()?>assets/image/waterheater.jpg"
+        <img src="<?= base_url()?>assets/image/waterheater.webp"
              alt="Convex Solar FPC"
              class="img-fluid reveal-img">
       </div>

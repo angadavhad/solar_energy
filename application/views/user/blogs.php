@@ -54,21 +54,21 @@
 
       <!-- BLOG 4 IMAGE -->
       <div class="blog-card image-card">
-        <img src="<?= base_url('assets/image/blog1.jpg') ?>">
+        <img src="<?= base_url('assets/image/blog1.webp') ?>">
         <h3>Everything about Solar Panels Subsidies in India 2024</h3>
         <p class="date">📅 28 March, 2024</p>
       </div>
 
       <!-- BLOG 5 IMAGE -->
       <div class="blog-card image-card">
-        <img src="<?= base_url('assets/image/blog2.jpg') ?>">
+        <img src="<?= base_url('assets/image/blog2.webp') ?>">
         <h3>Exploring New Types of Solar Panels in the Market</h3>
         <p class="date">📅 26 March, 2024</p>
       </div>
 
       <!-- BLOG 6 IMAGE -->
       <div class="blog-card image-card">
-        <img src="<?= base_url('assets/image/blog3.jpg') ?>">
+        <img src="<?= base_url('assets/image/blog3.webp') ?>">
         <h3>What type of Solar Panel is best for you?</h3>
         <p class="date">📅 24 March, 2024</p>
       </div>

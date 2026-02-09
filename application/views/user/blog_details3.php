@@ -3,7 +3,7 @@
 
     <!-- BLOG IMAGE -->
     <div class="blog-details-image">
-      <img src="<?= base_url('assets/image/blog1.jpg'); ?>" alt="Rooftop Solar System Ahilyanagar">
+      <img src="<?= base_url('assets/image/blog1.webp'); ?>" alt="Rooftop Solar System Ahilyanagar">
     </div>
 
     <!-- BLOG CONTENT -->
