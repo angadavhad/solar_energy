@@ -11,6 +11,7 @@
       <?php if($i % 2 != 0): ?>
       <!-- IMAGE LEFT -->
       <div class="col-md-6 text-center">
+      <div class="col-md-6 mb-4 mb-md-0 text-center">
         <img src="<?= base_url('uploads/'.$h->heater_image) ?>"
              alt="<?= $h->heater_title ?>"
              class="img-fluid reveal-img">
@@ -35,11 +36,25 @@
             <li class="capacity-box"><?= trim($cap) ?> LPD</li>
           <?php endforeach; ?>
         </ul>
+				<ul class="list-unstyled d-flex flex-wrap gap-2">
+ <ul class="list-unstyled d-flex flex-wrap gap-2">
+<?php
+  $caps = explode(',', $h->heater_capacity);
+  foreach ($caps as $cap):
+?>
+  <li class="capacity-box"><?= trim($cap) ?> LPD</li>
+<?php endforeach; ?>
+</ul>
+
+
+
+       
       </div>
 
       <?php if($i % 2 == 0): ?>
       <!-- IMAGE RIGHT -->
       <div class="col-md-6 text-center">
+      <div class="col-md-6 mt-4 mt-md-0 text-center">
         <img src="<?= base_url('uploads/'.$h->heater_image) ?>"
              alt="<?= $h->heater_title ?>"
              class="img-fluid reveal-img">
@@ -52,14 +67,14 @@
 
 <?php endforeach; ?>
 
-
 <?php else: ?>
   <div class="text-center py-5">
     <h4 class="text-danger">No Solar Water Heaters Available</h4>
   </div>
 <?php endif; ?>
 
-<!-- ================= SCROLL ANIMATION JS ================= -->
+
+<!-- ================= SCROLL ANIMATION JS (UNCHANGED) ================= -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 

@@ -105,6 +105,49 @@
   </ul>
 </li>
 
+<li class="sidebar-item">
+  <a data-bs-toggle="collapse" href="#productPages" class="sidebar-link">
+    <span class="align-middle">Products Page</span>
+  </a>
+
+  <ul id="productPages" class="sidebar-dropdown list-unstyled collapse">
+
+    <!-- Main Products Page -->
+    <li class="sidebar-item">
+      <a class="sidebar-link" href="<?= base_url('product') ?>">
+        Products
+      </a>
+    </li>
+
+    <!-- Future individual product pages -->
+    <li class="sidebar-item">
+      <a class="sidebar-link" href="<?= base_url('product/solar_water_heater') ?>">
+        Solar Water Heater
+      </a>
+    </li>
+
+    <li class="sidebar-item">
+      <a class="sidebar-link" href="<?= base_url('product/solar_pumps') ?>">
+        Solar Pumps
+      </a>
+    </li>
+
+    <li class="sidebar-item">
+      <a class="sidebar-link" href="<?= base_url('product/on_grid_solar') ?>">
+        On Grid Solar
+      </a>
+    </li>
+
+    <li class="sidebar-item">
+      <a class="sidebar-link" href="<?= base_url('product/street_light') ?>">
+        Street Light
+      </a>
+    </li>
+
+  </ul>
+</li>
+
+
 
 
   <ul id="aboutPages" class="sidebar-dropdown list-unstyled collapse">

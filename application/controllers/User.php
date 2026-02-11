@@ -10,6 +10,9 @@ class User extends CI_Controller {
 		$this->load->model('Solar_water_pump_model');
 		$this->load->database();
 
+		$this->load->model('Solar_water_heater_model');
+		$this->load->model('Solar_water_pump_model');
+		$this->load->database();
     }
 
     /* ================= HOME ================= */
@@ -62,6 +65,14 @@ public function about()
     $this->load->view('user/footer');
 }
 
+
+    public function solar_water_pump()
+    {
+		$data['pumps'] = $this->Solar_water_pump_model->get_all();
+        $this->load->view("user/navbar");
+        $this->load->view("user/solar_water_pump", $data);
+        $this->load->view("user/footer");
+    }
 
 
     public function on_grid_solar()

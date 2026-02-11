@@ -35,7 +35,9 @@ public function details($id)
     {
         $config = [
             'upload_path'   => './assets/uploads/',
+
             'allowed_types' => 'jpg|jpeg|png|webp',
+
             'file_name'     => time()
         ];
 
@@ -76,7 +78,9 @@ public function details($id)
 		if (!empty($_FILES['product_image']['name'])) {
 			$config = [
 				'upload_path'   => './assets/uploads/',
+
 				'allowed_types' => 'jpg|jpeg|png|webp',
+
 				'file_name'     => time()
 			];
 
@@ -100,7 +104,10 @@ public function details($id)
 {
     $config = [
         'upload_path'   => FCPATH.'uploads/',
+
         'allowed_types' => 'jpg|jpeg|png|webp',
+
+
         'file_name'     => time()
     ];
 
@@ -172,7 +179,10 @@ public function update_solar_water_heater()
 
         $config = [
             'upload_path'   => FCPATH.'uploads/',
+
             'allowed_types' => 'jpg|jpeg|png|webp',
+
+
             'file_name'     => time()
         ];
 
@@ -187,6 +197,7 @@ public function update_solar_water_heater()
     $this->Solar_water_heater_model->update($id, $data);
     redirect('product/solar_water_heater');
 }
+
 	// Admin Page
 public function solar_pumps()
 {
@@ -227,6 +238,29 @@ public function save_solar_water_pump()
     $this->Solar_water_pump_model->insert($data);
 
     redirect('product/solar_pumps');
+
+public function save_solar_water_pump()
+{
+    $config = [
+        'upload_path'   => FCPATH.'uploads/',
+        'allowed_types' => 'jpg|jpeg|png',
+        'file_name'     => time()
+    ];
+
+    $this->load->library('upload', $config);
+    $this->upload->do_upload('pump_image');
+    $img = $this->upload->data();
+
+    $data = [
+        'pump_title'        => $this->input->post('pump_title'),
+        'pump_details'      => $this->input->post('pump_details'),
+        'pump_applications' => implode(',', $this->input->post('pump_applications')),
+        'pump_image'        => $img['file_name']
+    ];
+
+    $this->Solar_water_pump_model->insert($data);
+    redirect('product/solar_water_pump');
+
 }
 
 
