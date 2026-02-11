@@ -22,7 +22,7 @@ class About extends CI_Controller
     private function upload_files($fields)
 {
     $config['upload_path']   = FCPATH.'uploads/';
-    $config['allowed_types'] = '*'; // 🔥 TEMP FIX (development)
+    $config['allowed_types'] = 'jpg|jpeg|png'; // 🔥 ALLOWED TYPES
     $config['max_size']      = 5120; // 5MB
     $config['encrypt_name']  = TRUE;
 

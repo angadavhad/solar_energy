@@ -5,7 +5,11 @@ class User extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('My_model');
-          $this->load->model('My_about');
+        $this->load->model('My_about');
+		$this->load->model('Solar_water_heater_model');
+		$this->load->model('Solar_water_pump_model');
+		$this->load->database();
+
     }
 
     /* ================= HOME ================= */
@@ -41,18 +45,24 @@ public function about()
     }
 
     public function solar_water_heater()
-    {
-        $this->load->view("user/navbar");
-        $this->load->view("user/solar_water_heater");
-        $this->load->view("user/footer");
-    }
+{
+    $data['heaters'] = $this->Solar_water_heater_model->get_all(); // ✅ DATA FETCH
 
-    public function solar_water_pump()
-    {
-        $this->load->view("user/navbar");
-        $this->load->view("user/solar_water_pump");
-        $this->load->view("user/footer");
-    }
+    $this->load->view("user/navbar");
+    $this->load->view("user/solar_water_heater", $data); // ✅ DATA PASS
+    $this->load->view("user/footer");
+}
+
+    public function solar_water_pump(){
+
+    $data['pumps'] = $this->Solar_water_pump_model->get_all();
+
+    $this->load->view('user/navbar');
+    $this->load->view('user/solar_water_pump',$data);
+    $this->load->view('user/footer');
+}
+
+
 
     public function on_grid_solar()
     {
@@ -154,7 +164,6 @@ public function contact(){
     $this->load->view("user/contact");
     $this->load->view("user/footer");
 }  
-
 
 
 

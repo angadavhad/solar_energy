@@ -1,114 +1,63 @@
 <!-- PAGE SPECIFIC CSS -->
 <link rel="stylesheet" href="<?= base_url('assets/css/solar_water_heater.css'); ?>">
 
-<!-- ================= SECTION 1 : CONVEX SOLAR ================= -->
-<section class="section1 py-5">
+<?php if(!empty($heaters)): ?>
+<?php $i = 0; foreach($heaters as $h): $i++; ?>
+
+<section class="py-5 <?= ($i % 2 == 0) ? 'section2' : 'section1' ?> tight-section">
   <div class="container">
     <div class="row align-items-center">
 
-      <!-- IMAGE -->
-      <div class="col-md-6 mb-4 mb-md-0 text-center">
-        <img src="<?= base_url()?>assets/image/waterheater.webp"
-             alt="Convex Solar"
+      <?php if($i % 2 != 0): ?>
+      <!-- IMAGE LEFT -->
+      <div class="col-md-6 text-center">
+        <img src="<?= base_url('uploads/'.$h->heater_image) ?>"
+             alt="<?= $h->heater_title ?>"
              class="img-fluid reveal-img">
       </div>
+      <?php endif; ?>
 
       <!-- CONTENT -->
       <div class="col-md-6 reveal-content">
-        <h1 class="fw-bold mb-3">Convex Solar</h1>
+        <h2 class="fw-bold mb-3"><?= $h->heater_title ?></h2>
 
         <p class="text-muted mb-4">
-          Our Solar Water Heater is designed to deliver excellent performance
-          with long-lasting durability using advanced solar technology.
+          <?= $h->heater_details ?>
         </p>
 
         <h5 class="fw-bold mb-2 text-success">Available Capacity</h5>
 
         <ul class="list-unstyled d-flex flex-wrap gap-2">
-          <li class="capacity-box">100 LPD</li>
-          <li class="capacity-box">150 LPD</li>
-          <li class="capacity-box">200 LPD</li>
-          <li class="capacity-box">250 LPD</li>
-          <li class="capacity-box">300 LPD</li>
-          <li class="capacity-box">500 LPD</li>
-          <li class="capacity-box">1000 LPD</li>
+          <?php
+            $caps = explode(',', $h->heater_capacity);
+            foreach ($caps as $cap):
+          ?>
+            <li class="capacity-box"><?= trim($cap) ?> LPD</li>
+          <?php endforeach; ?>
         </ul>
       </div>
 
-    </div>
-  </div>
-</section>
-
-<!-- ================= SECTION 2 : CONVEX SOLAR PLUS ================= -->
-<section class="py-5 section2 tight-section">
-  <div class="container">
-    <div class="row align-items-center">
-
-      <!-- CONTENT -->
-      <div class="col-md-6 reveal-content">
-        <h2 class="fw-bold mb-3">Convex Solar Plus</h2>
-
-        <p class="text-muted mb-4">
-          Convex Solar Plus is a premium variant designed for superior quality
-          and long-term performance with robust construction.
-        </p>
-
-        <h5 class="fw-bold mb-2 text-success">Available Capacity</h5>
-
-        <ul class="list-unstyled d-flex flex-wrap gap-2">
-          <li class="capacity-box">100 LPD</li>
-          <li class="capacity-box">150 LPD</li>
-          <li class="capacity-box">200 LPD</li>
-          <li class="capacity-box">250 LPD</li>
-          <li class="capacity-box">300 LPD</li>
-        </ul>
-      </div>
-
-      <!-- IMAGE -->
-      <div class="col-md-6 mt-4 mt-md-0 text-center">
-        <img src="<?= base_url()?>assets/image/waterheater2.webp"
-             alt="Convex Solar Plus"
+      <?php if($i % 2 == 0): ?>
+      <!-- IMAGE RIGHT -->
+      <div class="col-md-6 text-center">
+        <img src="<?= base_url('uploads/'.$h->heater_image) ?>"
+             alt="<?= $h->heater_title ?>"
              class="img-fluid reveal-img">
       </div>
+      <?php endif; ?>
 
     </div>
   </div>
 </section>
 
-<!-- ================= SECTION 3 : CONVEX SOLAR FPC ================= -->
-<section class="py-5 section1 tight-section">
-  <div class="container">
-    <div class="row align-items-center">
+<?php endforeach; ?>
 
-      <!-- IMAGE -->
-      <div class="col-md-6 mb-4 mb-md-0 text-center">
-        <img src="<?= base_url()?>assets/image/waterheater.webp"
-             alt="Convex Solar FPC"
-             class="img-fluid reveal-img">
-      </div>
 
-      <!-- CONTENT -->
-      <div class="col-md-6 reveal-content">
-        <h2 class="fw-bold mb-3">Convex Solar FPC</h2>
-
-        <p class="text-muted mb-4">
-          Convex Solar FPC uses advanced Flat Plate Collector technology,
-          ensuring high efficiency and long-term durability.
-        </p>
-
-        <h5 class="fw-bold mb-2 text-success">Available Capacity</h5>
-
-        <ul class="list-unstyled d-flex flex-wrap gap-2">
-          <li class="capacity-box">100 LPD</li>
-          <li class="capacity-box">200 LPD</li>
-          <li class="capacity-box">300 LPD</li>
-          <li class="capacity-box">500 LPD</li>
-        </ul>
-      </div>
-
-    </div>
+<?php else: ?>
+  <div class="text-center py-5">
+    <h4 class="text-danger">No Solar Water Heaters Available</h4>
   </div>
-</section>
+<?php endif; ?>
 
 <!-- ================= SCROLL ANIMATION JS ================= -->
 <script>
@@ -117,7 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-
         entry.target.classList.add('show');
 
         if (entry.target.classList.contains('reveal-content')) {
@@ -125,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
           boxes.forEach((box, i) => {
             setTimeout(() => {
               box.classList.add('show');
-            }, 140 * i); // smoother wave
+            }, 140 * i);
           });
         }
 

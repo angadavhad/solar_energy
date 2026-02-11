@@ -10,10 +10,11 @@
         <div class="image-break-wrapper reveal-image">
 
           <!-- image pieces -->
-          <div class="img-piece p1"></div>
-          <div class="img-piece p2"></div>
-          <div class="img-piece p3"></div>
-          <div class="img-piece p4"></div>
+          <div class="<?=base_url()?>assets/image/subpump.jpg"></div>
+          <div class="<?=base_url()?>assets/image/subpump.jpg"></div>
+          <div class="<?=base_url()?>assets/image/subpump.jpg"></div>
+          <div class="<?=base_url()?>assets/image/subpump.jpg"></div>
+         
 
         </div>
       </div>
@@ -75,7 +76,7 @@
 
       <!-- IMAGE SIDE -->
       <div class="col-md-6 text-center">
-        <img src="<?= base_url()?>assets/image/subpump2.webp"
+        <img src="<?= base_url()?>assets/image/subpump2.jpg"
              alt="Solar Water Pump System for Agriculture and Irrigation"
              class="img-fluid rounded">
       </div>
