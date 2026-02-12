@@ -75,6 +75,7 @@ class User extends CI_Controller {
     }
 
     /* ================= SERVICES ================= */
+
     public function services()
     {
         $this->load->view("user/navbar");
@@ -83,25 +84,48 @@ class User extends CI_Controller {
     }
 
     public function commercial()
-    {
-        $this->load->view("user/navbar");
-        $this->load->view("user/commercial");
-        $this->load->view("user/footer");
-    }
+{
+    $this->load->model('Commercial_model');
 
-    public function industrial()
-    {
-        $this->load->view("user/navbar");
-        $this->load->view("user/industrial");
-        $this->load->view("user/footer");
-    }
+    $data['about']    = $this->Commercial_model->commercial_about();
+    $data['points']   = $this->Commercial_model->commercial_points();
+    $data['suitable'] = $this->Commercial_model->commercial_suitable();
+    $data['benefits'] = $this->Commercial_model->commercial_benefits();
 
-    public function residential()
-    {
-        $this->load->view("user/navbar");
-        $this->load->view("user/residential");
-        $this->load->view("user/footer");
-    }
+    $this->load->view("user/navbar");
+    $this->load->view("user/commercial", $data);
+    $this->load->view("user/footer");
+}
+
+
+public function industrial()
+{
+    $this->load->model('Industrial_model');
+
+    $data['about']        = $this->Industrial_model->about();
+    $data['points']       = $this->Industrial_model->points();
+    $data['capabilities'] = $this->Industrial_model->capabilities();
+    $data['why']          = $this->Industrial_model->why_choose();
+
+    $this->load->view("user/navbar");
+    $this->load->view("user/industrial", $data);
+    $this->load->view("user/footer");
+}
+
+
+
+   public function residential()
+{
+    $this->load->model('Residential_model');
+
+    $data['about']    = $this->Residential_model->residential_about();
+    $data['points']   = $this->Residential_model->residential_points();
+    $data['benefits'] = $this->Residential_model->residential_benefits();
+
+    $this->load->view("user/navbar");
+    $this->load->view("user/residential", $data);
+    $this->load->view("user/footer");
+}
 
     /* ================= BLOG ================= */
     public function blogs()
