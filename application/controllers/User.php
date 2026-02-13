@@ -18,13 +18,13 @@ class User extends CI_Controller {
     {
         $this->load->view("user/navbar");
 
-        $data['hero_list'] = $this->db->where('status',1)->order_by('id','DESC')->get('hero_banner')->result();
-         $data['about'] = $this->db->get('about_us')->row();
+    $data['hero_list'] = $this->db->where('status',1)->order_by('id','DESC')->get('hero_banner')->result();
+    $data['about'] = $this->db->get('about_us')->row();
     $data['products'] = $this->db->get('products_section')->row();
     $data['service'] = $this->db->limit(1)->get('home_services')->row();
-     $data['blogs'] = $this->db->order_by('id','DESC')->get('blogs_home')->result();
-  $data['leading']   = $this->db->get('leading_section')->row();
-  $data['faqs'] = $this->db->order_by('id','DESC')->get('faqs')->result();
+    $data['blogs'] = $this->db->order_by('id','DESC')->get('blogs_home')->result();
+    $data['leading']   = $this->db->get('leading_section')->row();
+    $data['faqs'] = $this->db->order_by('id','DESC')->get('faqs')->result();
 
         $this->load->view("user/index",$data);
         $this->load->view("user/footer");
@@ -137,54 +137,39 @@ public function industrial()
 }
 
     /* ================= BLOG ================= */
-    public function blogs()
-    {
-        $this->load->view("user/navbar");
-        $this->load->view("user/blogs");
-        $this->load->view("user/footer");
+
+/* ================= BLOG ================= */
+
+public function blogs()
+{
+    $data['blogs'] = $this->db
+                            ->where('status',1)
+                            ->order_by('id','DESC')
+                            ->get('blogs')
+                            ->result();
+
+    $this->load->view("user/navbar");
+    $this->load->view("user/blogs", $data);
+    $this->load->view("user/footer");
+}
+
+
+public function blog_details($id)
+{
+    $data['blog'] = $this->db
+                            ->where('id',$id)
+                            ->where('status',1)
+                            ->get('blogs')
+                            ->row();
+
+    if(!$data['blog']){
+        show_404();
     }
 
-    public function blog_details()
-    {
-        $this->load->view("user/navbar");
-        $this->load->view("user/blog_details");
-        $this->load->view("user/footer");
-    }
-
-    public function blog_details1()
-    {
-        $this->load->view("user/navbar");
-        $this->load->view("user/blog_details1");
-        $this->load->view("user/footer");
-    }
-
-    public function blog_details2()
-    {
-        $this->load->view("user/navbar");
-        $this->load->view("user/blog_details2");
-        $this->load->view("user/footer");
-    }
-
-    public function blog_details3()
-    {
-        $this->load->view("user/navbar");
-        $this->load->view("user/blog_details3");
-        $this->load->view("user/footer");
-    }
-
-    public function blog_details4()
-    {
-        $this->load->view("user/navbar");
-        $this->load->view("user/blog_details4");
-        $this->load->view("user/footer");
-    }
-
-    public function blog_details5()
-    {
-        $this->load->view("user/navbar");
-        $this->load->view("user/blog_details5");
-        $this->load->view("user/footer");
-    }
+    $this->load->view("user/navbar");
+    $this->load->view("user/blog_details", $data);
+    $this->load->view("user/footer");
+}
 
     /* ================= CONTACT ================= */
     public function contact()

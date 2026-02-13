@@ -263,6 +263,11 @@
 </li>
 
 
+<li class="sidebar-item">
+   <a class="sidebar-link" href="<?= base_url('blog') ?>">Blog Page</a>
+</li>
+
+
       </ul>
     </div>
   </nav>
