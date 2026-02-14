@@ -1,67 +1,71 @@
 <link rel="stylesheet" href="<?= base_url() ?>assets/css/solar_street_light.css">
 
+<!-- ================= HERO SECTION ================= -->
+<?php foreach($hero as $h): ?>
 <section class="py-5 ssl-hero section1">
   <div class="container">
     <div class="row align-items-center">
 
       <!-- CONTENT -->
       <div class="col-md-6 mb-4 mb-md-0 ssl-reveal-left">
-        <span class="ssl-badge">SMART OUTDOOR LIGHTING</span>
-        <h1 class="fw-bold mt-3 mb-3">Solar Street Light</h1>
+        <span class="ssl-badge"><?= $h->badge ?></span>
+        <h1 class="fw-bold mt-3 mb-3"><?= $h->title ?></h1>
 
         <p class="text-muted">
-          Reliable outdoor lighting powered entirely by solar energy —
-          designed for streets, highways, villages, campuses, and public areas
-          without any grid dependency.
+          <?= $h->description ?>
         </p>
       </div>
 
       <!-- IMAGE -->
       <div class="col-md-6 text-center ssl-reveal-right">
-        <img src="<?= base_url()?>assets/image/streetlight1.webp"
+        <?php if(!empty($h->image)): ?>
+        <img src="<?= base_url('uploads/'.$h->image) ?>"
              alt="Solar Street Light System"
              class="img-fluid ssl-img">
+        <?php endif; ?>
       </div>
 
     </div>
   </div>
 </section>
+<?php endforeach; ?>
 
 
-
-<!-- ================= WHERE IT MAKES IMPACT ================= -->
+<!-- ================= IMPACT SECTION ================= -->
+<?php foreach($impact as $i): ?>
 <section class="py-5 ssl-impact section2">
   <div class="container">
     <div class="row justify-content-center">
 
       <div class="col-lg-9 text-center ssl-reveal-up">
         <h2 class="fw-bold mb-3">
-          Lighting That Works Anywhere, Anytime
+          <?= $i->impact_title ?>
         </h2>
 
         <p class="text-muted">
-          Solar Street Lights operate independently using built-in panels,
-          batteries, and smart controllers. They charge during the day and
-          automatically illuminate at night — perfect for areas where power
-          supply is unreliable or unavailable.
+          <?= $i->impact_description ?>
         </p>
       </div>
 
     </div>
   </div>
 </section>
+<?php endforeach; ?>
 
 
-<!-- ================= BENEFITS ================= -->
+<!-- ================= BENEFITS SECTION ================= -->
+<?php foreach($benefits as $b): ?>
 <section class="py-5 ssl-benefits section1">
   <div class="container">
     <div class="row align-items-center">
 
       <!-- IMAGE -->
       <div class="col-md-6 mb-4 mb-md-0 ssl-reveal-left text-center">
-        <img src="<?= base_url()?>assets/image/streetlight3.webp"
+        <?php if(!empty($b->image)): ?>
+        <img src="<?= base_url('uploads/'.$b->image) ?>"
              class="img-fluid ssl-img-small"
              alt="Benefits of Solar Street Light">
+        <?php endif; ?>
       </div>
 
       <!-- CONTENT -->
@@ -69,17 +73,18 @@
         <h2 class="fw-bold mb-3">Why Choose Solar Street Lights?</h2>
 
         <ul class="ssl-list">
-          <li>No electricity bills</li>
-          <li>Easy installation & low maintenance</li>
-          <li>Eco-friendly renewable solution</li>
-          <li>Automatic dusk-to-dawn operation</li>
-          <li>Ideal for remote & rural locations</li>
+          <?php if(!empty($b->benefit1)): ?><li><?= $b->benefit1 ?></li><?php endif; ?>
+          <?php if(!empty($b->benefit2)): ?><li><?= $b->benefit2 ?></li><?php endif; ?>
+          <?php if(!empty($b->benefit3)): ?><li><?= $b->benefit3 ?></li><?php endif; ?>
+          <?php if(!empty($b->benefit4)): ?><li><?= $b->benefit4 ?></li><?php endif; ?>
+          <?php if(!empty($b->benefit5)): ?><li><?= $b->benefit5 ?></li><?php endif; ?>
         </ul>
       </div>
 
     </div>
   </div>
 </section>
+<?php endforeach; ?>
 
 
 <script>

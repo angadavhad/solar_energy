@@ -92,7 +92,7 @@
 
     <!-- Main Products Page -->
     <li class="sidebar-item">
-      <a class="sidebar-link" href="<?= base_url('product') ?>">
+      <a class="sidebar-link" href="<?= base_url('product/admin') ?>">
         Products
       </a>
     </li>
@@ -111,56 +111,33 @@
     </li>
 
     <li class="sidebar-item">
-      <a class="sidebar-link" href="<?= base_url('product/on_grid_solar') ?>">
+      <a class="sidebar-link" href="<?= base_url('product/on_grid_solar_admin') ?>">
         On Grid Solar
       </a>
     </li>
 
     <li class="sidebar-item">
-      <a class="sidebar-link" href="<?= base_url('product/street_light') ?>">
-        Street Light
-      </a>
-    </li>
-
-  </ul>
-</li>
-
-<li class="sidebar-item">
-  <a data-bs-toggle="collapse" href="#productPages" class="sidebar-link">
-    <span class="align-middle">Products Page</span>
+  <a data-bs-toggle="collapse" href="#streetLightPages" class="sidebar-link">
+    <span class="align-middle">Street Light</span>
   </a>
 
-  <ul id="productPages" class="sidebar-dropdown list-unstyled collapse">
-
-    <!-- Main Products Page -->
+  <ul id="streetLightPages" class="sidebar-dropdown list-unstyled collapse">
+    
     <li class="sidebar-item">
-      <a class="sidebar-link" href="<?= base_url('product') ?>">
-        Products
-      </a>
-    </li>
-
-    <!-- Future individual product pages -->
-    <li class="sidebar-item">
-      <a class="sidebar-link" href="<?= base_url('product/solar_water_heater') ?>">
-        Solar Water Heater
+      <a class="sidebar-link" href="<?= base_url('product/hero_section') ?>">
+        Hero Section
       </a>
     </li>
 
     <li class="sidebar-item">
-      <a class="sidebar-link" href="<?= base_url('product/solar_pumps') ?>">
-        Solar Pumps
+      <a class="sidebar-link" href="<?= base_url('product/impact_section') ?>">
+        Impact Section
       </a>
     </li>
 
     <li class="sidebar-item">
-      <a class="sidebar-link" href="<?= base_url('product/on_grid_solar') ?>">
-        On Grid Solar
-      </a>
-    </li>
-
-    <li class="sidebar-item">
-      <a class="sidebar-link" href="<?= base_url('product/street_light') ?>">
-        Street Light
+      <a class="sidebar-link" href="<?= base_url('product/benefits_section') ?>">
+        Benefits Section
       </a>
     </li>
 
@@ -187,8 +164,10 @@
     <li class="sidebar-item">
       <a class="sidebar-link" href="<?= base_url('service/service_details') ?>"> Details Section</a>
     </li>
+
   </ul>
 </li>
+
 
 
 

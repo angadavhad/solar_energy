@@ -1,5 +1,12 @@
 <link rel="stylesheet" href="<?= base_url() ?>assets/css/on_grid_solar.css">
 
+<?php if(!empty($solar)): ?>
+
+<?php 
+    // Description split logic
+    $descParts = explode('.', $solar->description);
+?>
+
 <!-- ================= HERO SECTION ================= -->
 <section class="py-5 bg-white on-grid-hero">
   <div class="container">
@@ -7,19 +14,19 @@
 
       <!-- CONTENT -->
       <div class="col-md-6 mb-4 mb-md-0 og-reveal-left">
-        <h1 class="fw-bold mb-3">On Grid Solar Power System</h1>
+        <h1 class="fw-bold mb-3">
+            <?= $solar->title ?>
+        </h1>
 
         <p class="text-muted">
-          On Grid Solar Power Systems are connected directly to the electricity
-          grid and help reduce your electricity bills by using solar energy
-          during the daytime.
+            <?= $solar->description ?>
         </p>
       </div>
 
       <!-- IMAGE -->
       <div class="col-md-6 text-center og-reveal-right">
-        <img src="<?= base_url()?>assets/image/gridsolar.webp"
-             alt="On Grid Solar Power System"
+        <img src="<?= base_url('uploads/'.$solar->image1) ?>"
+             alt="<?= $solar->title ?>"
              class="img-fluid rounded">
       </div>
 
@@ -34,7 +41,7 @@
 
       <!-- IMAGE SIDE -->
       <div class="col-md-6 mb-4 mb-md-0 og-reveal-left text-center">
-        <img src="<?= base_url()?>assets/image/solargrid.webp"
+        <img src="<?= base_url('uploads/'.$solar->image2) ?>"
              alt="On Grid Solar Power Flow"
              class="img-fluid ongrid-img">
       </div>
@@ -44,23 +51,26 @@
         <span class="og-badge">SMART SOLAR SOLUTION</span>
 
         <h2 class="fw-bold mt-3 mb-3">
-          Generate Power. Cut Bills. Stay Connected.
+            Why Choose <?= $solar->title ?>?
         </h2>
 
         <p class="text-muted">
-          On Grid Solar systems let you use solar power directly during the day
-          while staying connected to the electricity grid. You consume what you
-          generate and send the extra power back — reducing costs without
-          compromising reliability.
+            <?= isset($descParts[0]) ? $descParts[0].'.' : '' ?>
         </p>
+
+        <p class="text-muted">
+            <?= isset($descParts[1]) ? $descParts[1].'.' : '' ?>
+        </p>
+
       </div>
 
     </div>
   </div>
 </section>
 
+<?php endif; ?>
 
-<!-- ================= POWER FLOW ================= -->
+<!-- ================= POWER FLOW (STATIC AS IT IS) ================= -->
 <section class="py-5 on-grid-process">
   <div class="container">
     <div class="row text-center">
@@ -97,6 +107,7 @@
   </div>
 </section>
 
+<?php if(!empty($solar)): ?>
 
 <!-- ================= BENEFITS ================= -->
 <section class="py-5 bg-light on-grid-benefits">
@@ -105,14 +116,16 @@
 
       <!-- IMAGE -->
       <div class="col-md-6 mb-4 mb-md-0 og-reveal-left">
-        <img src="<?= base_url()?>assets/image/gridbenifit.webp"
+        <img src="<?= base_url('uploads/'.$solar->image3) ?>"
              class="img-fluid rounded"
              alt="Benefits of On Grid Solar">
       </div>
 
       <!-- CONTENT -->
       <div class="col-md-6 og-reveal-right">
-        <h2 class="fw-bold mb-3">Benefits of On Grid Solar</h2>
+        <h2 class="fw-bold mb-3">
+            Benefits of <?= $solar->title ?>
+        </h2>
 
         <ul class="text-muted ps-3">
           <li>Significant reduction in electricity bills</li>
@@ -127,13 +140,15 @@
   </div>
 </section>
 
+<?php endif; ?>
+
 <script>
 const ogObserver = new IntersectionObserver(
   entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("show");
-        ogObserver.unobserve(entry.target); // one time only
+        ogObserver.unobserve(entry.target);
       }
     });
   },

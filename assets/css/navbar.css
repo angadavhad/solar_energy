@@ -9,7 +9,7 @@
   background-color: #01329f !important;	
   border-bottom:2px solid transparent;
   border-image:linear-gradient(260deg,#3df2f2,#0f0f0f) 4;
-  position:fixed;        /* ✅ FIXED */
+   position:fixed;    /*    ✅ FIXED */
   top:0;
   left:0;
   width:100%;
