@@ -60,7 +60,7 @@
         </tbody>
       </table>
     </div>
-a
+
     <!-- ADD -->
     <form method="post"
           action="<?= base_url('commercial/add_suitable') ?>"
