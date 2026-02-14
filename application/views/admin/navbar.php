@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Solar Energy Dashboard</title>
 <link rel="icon" type="image/png" href="<?= base_url('assets/image/web_logo.webp') ?>">
-
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <link href="<?=base_url() ?>assets/admin/css/app.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -161,7 +162,7 @@
 
       <li class="sidebar-item">
   <a data-bs-toggle="collapse" href="#servicePages" class="sidebar-link">
-    <span class="align-middle">service Page</span>
+    <span class="align-middle ">service Page </span>
   </a>
 
   <ul id="servicePages" class="sidebar-dropdown list-unstyled collapse">
@@ -207,7 +208,7 @@
 
       <li class="sidebar-item">
   <a data-bs-toggle="collapse" href="#industrialPages" class="sidebar-link">
-    <span class="align-middle">Industrial Page</span>
+    <span class="align-middle ">Industrial Page </span>
   </a>
 
   <ul id="industrialPages" class="sidebar-dropdown list-unstyled collapse">
