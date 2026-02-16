@@ -178,10 +178,7 @@
       <a class="sidebar-link" href="<?= base_url('service/service_card') ?>"> Card Section</a>
     </li>
 
-     <li class="sidebar-item">
-      <a class="sidebar-link" href="<?= base_url('service/service_points') ?>"> Points Section</a>
-    </li>
-
+     
     <li class="sidebar-item">
       <a class="sidebar-link" href="<?= base_url('service/service_details') ?>"> Details Section</a>
     </li>
@@ -293,11 +290,13 @@
 
       <div class="navbar-collapse collapse">
         <ul class="navbar-nav navbar-align">
-          <li class="nav-item">
-            <span class="nav-link text-dark fw-bold">
-              Solar Energy Management System
-            </span>
-          </li>
+         <li class="nav-item">
+    <a href="<?= base_url('admin/logout') ?>" 
+       class="btn btn-outline-primary me-2">
+       Logout
+    </a>
+</li>
+
         </ul>
       </div>
     </nav>
