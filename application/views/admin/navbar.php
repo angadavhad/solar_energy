@@ -34,6 +34,13 @@
   </a>
 </li>
 
+<li class="sidebar-item">
+  <a class="sidebar-link" href="<?= base_url('contact/admin') ?>">
+    Contact Messages
+  </a>
+</li>
+
+
         <li class="sidebar-item">
   <a data-bs-toggle="collapse" href="#homePages" class="sidebar-link">
     <span class="align-middle">Home Page</span>

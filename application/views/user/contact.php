@@ -48,6 +48,19 @@
             </p>
         </div>
 
+		<?php if($this->session->flashdata('error')): ?>
+<div class="alert alert-danger text-center">
+    <?= $this->session->flashdata('error'); ?>
+</div>
+<?php endif; ?>
+
+<?php if($this->session->flashdata('success')): ?>
+<div class="alert alert-success text-center">
+    <?= $this->session->flashdata('success'); ?>
+</div>
+<?php endif; ?>
+
+
         <!-- RIGHT SIDE -->
         <div class="contact-right">
 
