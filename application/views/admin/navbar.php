@@ -173,22 +173,25 @@
 
 
 
-      <li class="sidebar-item">
+  <li class="sidebar-item">
   <a data-bs-toggle="collapse" href="#servicePages" class="sidebar-link">
-    <span class="align-middle ">service Page </span>
+    <span class="align-middle">Service Page</span>
   </a>
 
   <ul id="servicePages" class="sidebar-dropdown list-unstyled collapse">
-   
-
+    
     <li class="sidebar-item">
-      <a class="sidebar-link" href="<?= base_url('service/service_card') ?>"> Card Section</a>
+      <a class="sidebar-link" href="<?= base_url('service/service_card') ?>">
+        Card Section
+      </a>
     </li>
 
-     
     <li class="sidebar-item">
-      <a class="sidebar-link" href="<?= base_url('service/service_details') ?>"> Details Section</a>
+      <a class="sidebar-link" href="<?= base_url('service/service_details') ?>">
+        Details Section
+      </a>
     </li>
+
   </ul>
 </li>
 
@@ -307,3 +310,6 @@
         </ul>
       </div>
     </nav>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
