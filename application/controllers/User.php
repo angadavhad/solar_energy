@@ -16,6 +16,8 @@ class User extends CI_Controller {
 		$this->load->model('Ssl_hero_model');
         $this->load->model('Ssl_impact_model');
         $this->load->model('Ssl_benefits_model');
+        $this->load->model('Service_model');
+        
 		 $this->load->database();
     }
 
@@ -101,9 +103,12 @@ class User extends CI_Controller {
 
     public function services()
     {
-        $this->load->view("user/navbar");
-        $this->load->view("user/services");
-        $this->load->view("user/footer");
+        $data['services'] = $this->Service_model->get_services();
+        $data['details']  = $this->Service_model->get_details();
+
+        $this->load->view('user/navbar');
+        $this->load->view('user/services', $data);
+        $this->load->view('user/footer');
     }
 
     public function commercial()

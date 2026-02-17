@@ -26,7 +26,7 @@ class Admin extends CI_Controller {
             'email' => $email
         ])->row();
 
-        if($admin && $password === $admin->password)
+        if($admin && $password === $admin->password)    
 {
 
             $this->session->set_userdata([

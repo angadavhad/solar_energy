@@ -1,67 +1,208 @@
-<h3>Add Service Detail</h3>
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
-<form method="post" action="<?= base_url('admin_services/add_detail') ?>">
-    
-    <label>Select Service</label>
-    <select name="service_id" class="form-control" required>
-        <?php foreach($services as $service): ?>
-            <option value="<?= $service->id ?>">
-                <?= $service->title ?>
-            </option>
-        <?php endforeach; ?>
-    </select>
+<style>
+body{
+    background:#f4f6f9;
+}
+.text-orange{
+    color:#ff7a00;
+}
+.btn-orange{
+    background:#ff7a00;
+    color:#fff;
+    border:none;
+    font-weight:600;
+    border-radius:8px;
+}
+.btn-orange:hover{
+    background:#e96f00;
+    color:#fff;
+}
+.card-box{
+    background:#fff;
+    border-radius:16px;
+    padding:25px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+.card-box:hover{
+    transform:translateY(-4px);
+    box-shadow:0 25px 50px rgba(0,0,0,0.15);
+}
+.section-title{
+    font-weight:700;
+    border-bottom:2px solid #ff7a00;
+    padding-bottom:6px;
+    margin-bottom:15px;
+}
+.detail-image{
+    width:120px;
+    height:90px;
+    object-fit:cover;
+    border-radius:10px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    border:2px solid #fff;
+}
+.form-label{
+    font-weight:600;
+}
+</style>
 
-    <label>Long Description</label>
-    <textarea name="long_desc" class="form-control" required></textarea>
+<div class="container-fluid py-4">
 
-    <label>Point 1</label>
-    <input type="text" name="point1" class="form-control">
+<h3 class="fw-bold text-orange mb-4">Manage Service Details</h3>
 
-    <label>Point 2</label>
-    <input type="text" name="point2" class="form-control">
+<!-- ================= ADD NEW DETAIL ================= -->
+<div class="card-box mb-5">
+    <div class="section-title">Add Service Detail</div>
 
-    <label>Point 3</label>
-    <input type="text" name="point3" class="form-control">
+    <form method="post"
+          action="<?= base_url('service/add_detail') ?>"
+          enctype="multipart/form-data">
 
-    <br>
-    <button type="submit" class="btn btn-success">Add</button>
-</form>
+        <div class="row">
 
-<hr>
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Select Service</label>
+                <select name="service_id" class="form-control" required>
+                    <?php foreach($services as $service): ?>
+                        <option value="<?= $service->id ?>">
+                            <?= $service->title ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Detail Image</label>
+                <input type="file"
+                       name="detail_image"
+                       class="form-control"
+                       accept=".jpg,.jpeg,.png,.webp">
+            </div>
+
+            <div class="col-12 mb-3">
+                <label class="form-label">Long Description</label>
+                <textarea name="long_desc"
+                          class="form-control"
+                          rows="3"
+                          required></textarea>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Point 1</label>
+                <input type="text" name="point1" class="form-control">
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Point 2</label>
+                <input type="text" name="point2" class="form-control">
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Point 3</label>
+                <input type="text" name="point3" class="form-control">
+            </div>
+
+        </div>
+
+        <button type="submit" class="btn btn-success px-4">
+            Add Detail
+        </button>
+
+    </form>
+</div>
 
 
+<!-- ================= EXISTING DETAILS ================= -->
+<h5 class="fw-bold mb-3 text-orange">Existing Service Details</h5>
 
-<h3>All Service Details</h3>
+<div class="row g-4">
 
 <?php foreach($details as $detail): ?>
 
-<form method="post" action="<?= base_url('admin_services/update_detail/'.$detail->id) ?>">
-    
-    <div style="border:1px solid #ddd; padding:20px; margin-bottom:20px;">
-        
-        <strong>Service:</strong> <?= $detail->title ?><br><br>
+<div class="col-md-6">
+<div class="card-box">
 
-        <label>Long Description</label>
-        <textarea name="long_desc" class="form-control"><?= $detail->long_desc ?></textarea>
+    <div class="section-title">
+        <?= $detail->title ?>
+    </div>
 
-        <label>Point 1</label>
-        <input type="text" name="point1" value="<?= $detail->point1 ?>" class="form-control">
+    <form method="post"
+          action="<?= base_url('service/update_detail/'.$detail->id) ?>"
+          enctype="multipart/form-data">
 
-        <label>Point 2</label>
-        <input type="text" name="point2" value="<?= $detail->point2 ?>" class="form-control">
+        <!-- IMAGE PREVIEW SAFE -->
+     <div class="text-center mb-3">
+<?php if(!empty($detail->detail_image)) { ?>
+    <img src="<?= base_url('assets/image/'.$detail->detail_image) ?>?v=<?= time(); ?>"
+         class="detail-image">
+<?php } ?>
+</div>
 
-        <label>Point 3</label>
-        <input type="text" name="point3" value="<?= $detail->point3 ?>" class="form-control">
+
+        <!-- CHANGE IMAGE -->
+        <div class="mb-3">
+            <label class="form-label">Change Image</label>
+            <input type="file"
+                   name="detail_image"
+                   class="form-control"
+                   accept=".jpg,.jpeg,.png,.webp">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Long Description</label>
+            <textarea name="long_desc"
+                      class="form-control"
+                      rows="3"><?= $detail->long_desc ?></textarea>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Point 1</label>
+                <input type="text"
+                       name="point1"
+                       value="<?= $detail->point1 ?>"
+                       class="form-control">
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Point 2</label>
+                <input type="text"
+                       name="point2"
+                       value="<?= $detail->point2 ?>"
+                       class="form-control">
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label class="form-label">Point 3</label>
+                <input type="text"
+                       name="point3"
+                       value="<?= $detail->point3 ?>"
+                       class="form-control">
+            </div>
+        </div>
 
         <input type="hidden" name="service_id" value="<?= $detail->service_id ?>">
 
-        <br>
-        <button type="submit" class="btn btn-warning">Update</button>
-        <a href="<?= base_url('admin_services/delete_detail/'.$detail->id) ?>" 
-           class="btn btn-danger"
-           onclick="return confirm('Are you sure?')">Delete</a>
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-orange">
+                Update
+            </button>
 
-    </div>
-</form>
+            <a href="<?= base_url('service/delete_detail/'.$detail->id) ?>"
+               onclick="return confirm('Delete this detail?')"
+               class="btn btn-danger">
+                Delete
+            </a>
+        </div>
+
+    </form>
+
+</div>
+</div>
 
 <?php endforeach; ?>
+
+</div>
+</div>
