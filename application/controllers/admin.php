@@ -26,7 +26,8 @@ class Admin extends CI_Controller {
             'email' => $email
         ])->row();
 
-        if($admin && password_verify($password, $admin->password)){
+        if($admin && $password === $admin->password)
+{
 
             $this->session->set_userdata([
                 'admin_id' => $admin->id,
@@ -42,6 +43,10 @@ class Admin extends CI_Controller {
         }
     }
 
+
+
+
+    
     /* ================= DASHBOARD ================= */
 
     public function index()
