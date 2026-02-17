@@ -97,7 +97,7 @@
             <h2 class="counter" data-target="<?= $rejected_quotes ?>">0</h2>
         </div>
     </div>
-
+    
 </div>
 <div class="card shadow-sm mt-4 border-0">
     <div class="card-body">

@@ -25,6 +25,82 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+(function () {
+  const slider = document.getElementById('slider'),
+        cards = [...document.querySelectorAll('.testimonial-card')],
+        dotsContainer = document.getElementById('dots'),
+        nextBtn = document.querySelector('.next'),
+        prevBtn = document.querySelector('.prev'),
+        container = document.querySelector('.slider-container');
+
+  const totalCards = cards.length;
+  let currentIndex = 0,
+      currentVisible = getVisible(),
+      totalSlides = calcSlides();
+
+  function getVisible() {
+    return window.innerWidth <= 600 ? 1 :
+           window.innerWidth <= 950 ? 2 : 3;
+  }
+
+  function calcSlides() {
+    return Math.max(1, totalCards - currentVisible + 1);
+  }
+
+  function renderDots() {
+    dotsContainer.innerHTML = '';
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('span');
+      dot.className = 'dot' + (i === currentIndex ? ' active' : '');
+      dot.dataset.index = i;
+      dot.onclick = e => goTo(+e.target.dataset.index);
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function update() {
+    if (window.innerWidth > 600)
+      slider.style.transform =
+        `translateX(-${currentIndex * (100 / currentVisible)}%)`;
+    else slider.style.transform = 'none';
+
+    document.querySelectorAll('.dot')
+      .forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+  }
+
+  function goTo(i) {
+    currentIndex = (i + totalSlides) % totalSlides;
+    update();
+  }
+
+  const next = () => goTo(currentIndex + 1),
+        prev = () => goTo(currentIndex - 1);
+
+  function refresh() {
+    currentVisible = getVisible();
+    totalSlides = calcSlides();
+    currentIndex = Math.min(currentIndex, totalSlides - 1);
+    renderDots();
+    update();
+  }
+
+  window.addEventListener('resize', refresh);
+
+  if (nextBtn) nextBtn.onclick = e => { e.preventDefault(); next(); };
+  if (prevBtn) prevBtn.onclick = e => { e.preventDefault(); prev(); };
+
+  let auto = setInterval(next, 4200);
+  if (container) {
+    container.onmouseenter = () => clearInterval(auto);
+    container.onmouseleave = () => auto = setInterval(next, 4200);
+  }
+
+  renderDots();
+  update();
+})();
+
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
 

@@ -327,75 +327,84 @@
 </section>
 
 <?php } ?>
-<!-- ===== TESTIMONIALS SECTION =====   -->
-<section class="testimonials-section">
 
-  <!-- Title -->
-  <div class="testimonials-heading">
-    <h2>What People Are Saying</h2>
-    <p>Our Happy Clients</p>
-  </div>
 
-  <!-- Testimonials Layout -->
-  <div class="testimonials-container">
 
-    <!-- ✅ Left Big Card -->
-    <div class="testimonial-card big-card">
 
-      <div class="client-img">
-        <img src="<?= base_url('assets/image/People.webp') ?>" alt="Client">
-      </div>
+  <section class="testimonial-section">
+    <h2>What Our Clients Say</h2>
+    <p class="subtitle">Trusted Solar Energy Solutions Across Maharashtra</p>
 
-      <p>
-        "Maha Solar Systems have been saving our electricity bills from 3 years
-        now. We must say that our Housing society has been successful in reducing
-        the maintenance costs for our residents."
-      </p>
+    <div class="slider-container">
+      <button class="arrow prev" aria-label="Previous slide" type="button">‹</button>
 
-      <span class="client-name">Mr. Jagtap</span>
-    </div>
-
-    <!-- ✅ Right Side Cards -->
-    <div class="right-cards">
-
-      <!-- Card 1 -->
-      <div class="testimonial-card small-card">
-
-        <div class="client-img">
-          <img src="<?= base_url('assets/image/People.webp') ?>" alt="Client">
+      <div class="slider" id="slider">
+        <!-- CARD 1 -->
+        <div class="testimonial-card">
+          <div class="card-inner">
+            <img src="https://i.pravatar.cc/160?img=1" alt="Rahul Patil" loading="lazy">
+            <div class="stars">★★★★★</div>
+            <p>“Excellent solar installation service. Very professional team — they answered all my doubts.”</p>
+            <h4>Rahul Patil</h4>
+            <div class="role">Home Owner</div>
+          </div>
         </div>
 
-        <p>
-          "As an environment conscious person, I try to use as much solar as possible
-          so that we contribute to solving climate change..."
-        </p>
-
-        <span class="client-name">Mrs. Balchandani</span>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="testimonial-card small-card">
-
-        <div class="client-img">
-          <img src="<?= base_url('assets/image/People.webp') ?>" alt="Client">
+        <!-- CARD 2 -->
+        <div class="testimonial-card">
+          <div class="card-inner">
+            <img src="https://i.pravatar.cc/160?img=2" alt="Sneha Kulkarni" loading="lazy">
+            <div class="stars">★★★★★</div>
+            <p>“Smooth process and affordable pricing. Highly recommend for small business owners.”</p>
+            <h4>Sneha Kulkarni</h4>
+            <div class="role">Business Owner</div>
+          </div>
         </div>
 
-        <p>
-          "Maha Solar has been very helpful in getting our carbon footprints low
-          to meet the industrial sustainable energy requirements..."
-        </p>
+        <!-- CARD 3 -->
+        <div class="testimonial-card">
+          <div class="card-inner">
+            <img src="https://i.pravatar.cc/160?img=3" alt="Amit Deshmukh" loading="lazy">
+            <div class="stars">★★★★★</div>
+            <p>“After‑sales support is excellent. My electricity bill reduced by 40% — incredible!”</p>
+            <h4>Amit Deshmukh</h4>
+            <div class="role">Entrepreneur</div>
+          </div>
+        </div>
 
-        <span class="client-name">Mr. Bhansal</span>
-      </div>
+        <!-- CARD 4 -->
+        <div class="testimonial-card">
+          <div class="card-inner">
+            <img src="https://i.pravatar.cc/160?img=4" alt="Priya Joshi" loading="lazy">
+            <div class="stars">★★★★★</div>
+            <p>“Very satisfied with service quality and quick installation. Team finished in one day.”</p>
+            <h4>Priya Joshi</h4>
+            <div class="role">Customer</div>
+          </div>
+        </div>
 
-    </div>
+        <!-- CARD 5 – extra to demonstrate loop (still 3 slides in visible area) -->
+        <div class="testimonial-card">
+          <div class="card-inner">
+            <img src="https://i.pravatar.cc/160?img=5" alt="Vikram More" loading="lazy">
+            <div class="stars">★★★★★</div>
+            <p>“Great experience from start to finish. The team really cares about long‑term savings.”</p>
+            <h4>Vikram More</h4>
+            <div class="role">Farmer</div>
+          </div>
+        </div>
+      </div> <!-- slider end -->
 
-  </div>
+      <button class="arrow next" aria-label="Next slide" type="button">›</button>
+    </div> <!-- slider-container -->
 
-</section>
+    <div class="dots" id="dots"></div>
+  </section>
+
+  <!-- subtle note: ensures that even with additional cards everything loops -->
 
 
-<script src="<?= base_url('assets/js/index.js') ?>"></script>
+    <script src="<?= base_url('assets/js/index.js') ?>"></script>
 
 
 </body>
