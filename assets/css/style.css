@@ -46,7 +46,11 @@ html, body {
 
 body {
   overflow-x: hidden;
+	    padding-top: 90px;
 }
+/* Navbar height = approx 90px */
+
+
 
 .ms-footer {
   margin: 0 !important;
