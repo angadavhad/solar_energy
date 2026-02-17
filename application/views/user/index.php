@@ -330,79 +330,56 @@
 
 
 
+<section class="testimonial-section">
 
-  <section class="testimonial-section">
-    <h2>What Our Clients Say</h2>
-    <p class="subtitle">Trusted Solar Energy Solutions Across Maharashtra</p>
+  <h2>What Our Clients Say</h2>
+  <p class="subtitle">Trusted Solar Energy Solutions Across Maharashtra</p>
+
+  <div class="slider-wrapper">
+
+    <button class="arrow prev">&#10094;</button>
 
     <div class="slider-container">
-      <button class="arrow prev" aria-label="Previous slide" type="button">‹</button>
-
       <div class="slider" id="slider">
-        <!-- CARD 1 -->
+
         <div class="testimonial-card">
           <div class="card-inner">
-            <img src="https://i.pravatar.cc/160?img=1" alt="Rahul Patil" loading="lazy">
+            <img src="https://i.pravatar.cc/160?img=11">
             <div class="stars">★★★★★</div>
-            <p>“Excellent solar installation service. Very professional team — they answered all my doubts.”</p>
+            <p>“Excellent solar installation service.”</p>
             <h4>Rahul Patil</h4>
             <div class="role">Home Owner</div>
           </div>
         </div>
 
-        <!-- CARD 2 -->
         <div class="testimonial-card">
           <div class="card-inner">
-            <img src="https://i.pravatar.cc/160?img=2" alt="Sneha Kulkarni" loading="lazy">
+            <img src="https://i.pravatar.cc/160?img=12">
             <div class="stars">★★★★★</div>
-            <p>“Smooth process and affordable pricing. Highly recommend for small business owners.”</p>
+            <p>“Smooth process and affordable pricing.”</p>
             <h4>Sneha Kulkarni</h4>
             <div class="role">Business Owner</div>
           </div>
         </div>
 
-        <!-- CARD 3 -->
         <div class="testimonial-card">
           <div class="card-inner">
-            <img src="https://i.pravatar.cc/160?img=3" alt="Amit Deshmukh" loading="lazy">
+            <img src="https://i.pravatar.cc/160?img=13">
             <div class="stars">★★★★★</div>
-            <p>“After‑sales support is excellent. My electricity bill reduced by 40% — incredible!”</p>
+            <p>“After-sales support is excellent.”</p>
             <h4>Amit Deshmukh</h4>
             <div class="role">Entrepreneur</div>
           </div>
         </div>
 
-        <!-- CARD 4 -->
-        <div class="testimonial-card">
-          <div class="card-inner">
-            <img src="https://i.pravatar.cc/160?img=4" alt="Priya Joshi" loading="lazy">
-            <div class="stars">★★★★★</div>
-            <p>“Very satisfied with service quality and quick installation. Team finished in one day.”</p>
-            <h4>Priya Joshi</h4>
-            <div class="role">Customer</div>
-          </div>
-        </div>
+      </div>
+    </div>
 
-        <!-- CARD 5 – extra to demonstrate loop (still 3 slides in visible area) -->
-        <div class="testimonial-card">
-          <div class="card-inner">
-            <img src="https://i.pravatar.cc/160?img=5" alt="Vikram More" loading="lazy">
-            <div class="stars">★★★★★</div>
-            <p>“Great experience from start to finish. The team really cares about long‑term savings.”</p>
-            <h4>Vikram More</h4>
-            <div class="role">Farmer</div>
-          </div>
-        </div>
-      </div> <!-- slider end -->
+    <button class="arrow next">&#10095;</button>
 
-      <button class="arrow next" aria-label="Next slide" type="button">›</button>
-    </div> <!-- slider-container -->
+  </div>
 
-    <div class="dots" id="dots"></div>
-  </section>
-
-  <!-- subtle note: ensures that even with additional cards everything loops -->
-
+</section>
 
     <script src="<?= base_url('assets/js/index.js') ?>"></script>
 
